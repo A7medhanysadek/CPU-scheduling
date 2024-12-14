@@ -1,0 +1,15 @@
+﻿  Home.cpp
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(7,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(13,5): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(14,9): error C2065: 'mov': undeclared identifier
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(14,13): error C2146: syntax error: missing ';' before identifier 'eax'
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(14,13): error C2065: 'eax': undeclared identifier
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(15,9): error C2146: syntax error: missing ';' before identifier 'add'
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(15,9): error C2065: 'add': undeclared identifier
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(15,13): error C2146: syntax error: missing ';' before identifier 'eax'
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(15,13): error C2065: 'eax': undeclared identifier
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(16,9): error C2146: syntax error: missing ';' before identifier 'mov'
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(16,9): error C2065: 'mov': undeclared identifier
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(16,13): error C2146: syntax error: missing ';' before identifier 'result'
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(16,21): error C2065: 'eax': undeclared identifier
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(17,5): error C2143: syntax error: missing ';' before '}'
