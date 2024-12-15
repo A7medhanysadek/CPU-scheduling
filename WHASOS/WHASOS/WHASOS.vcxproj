@@ -129,15 +129,20 @@
     <ClCompile Include="process.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FCFSscheduler.h" />
     <ClInclude Include="Home.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="process.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WHASOS.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
