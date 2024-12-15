@@ -126,11 +126,13 @@
   <ItemGroup>
     <ClCompile Include="Home.cpp" />
     <ClCompile Include="proc1.cpp" />
+    <ClCompile Include="process.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Home.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="process.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Home.resx">
