@@ -10,6 +10,7 @@ void main(array<String^>^ args) {
     int result = AddNumbers(10, 5);
 	int x = 10;
     MessageBox::Show("The result is: " + result, "Calculation Result");
+	// trying FCFSscheduler
     WHASOS::Home frm;
     Application::Run(% frm);
 }

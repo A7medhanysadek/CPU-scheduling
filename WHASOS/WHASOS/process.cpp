@@ -11,18 +11,20 @@ process::process() {
 	pBarValue = 0;
 	priority = 0;
 }
-process::process(string processID, long arrivalTime, long burstTime, long startTime) {
-    this->processID = processID;
-    this->arrivalTime = arrivalTime;
-    this->burstTime = burstTime;
-    this->startTime = startTime;
-    lastRemainingBurst = (int)burstTime;
-}
-process::process(string processID, long arrivalTime, long burstTime, long startTime, long priority) {
+process::process(string processID, int arrivalTime, int burstTime, int startTime, int priority)
+{
 	this->processID = processID;
 	this->arrivalTime = arrivalTime;
 	this->burstTime = burstTime;
 	this->startTime = startTime;
 	this->priority = priority;
-	lastRemainingBurst = (int)burstTime;
+	lastRemainingBurst = burstTime;
+}
+process::process(string processID, int arrivalTime, int burstTime, int startTime)
+{
+	this->processID = processID;
+	this->arrivalTime = arrivalTime;
+	this->burstTime = burstTime;
+	this->startTime = startTime;
+	lastRemainingBurst = burstTime;
 }
