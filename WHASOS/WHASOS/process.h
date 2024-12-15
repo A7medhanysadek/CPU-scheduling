@@ -11,6 +11,7 @@ struct process
     int endTime;
     int waitTime;
     int lastRemainingBurst;
+	int turnaroundTime;
     int pBarValue = 0;
     int priority;
 	process(); 

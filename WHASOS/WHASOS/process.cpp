@@ -10,6 +10,7 @@ process::process() {
 	lastRemainingBurst = 0;
 	pBarValue = 0;
 	priority = 0;
+	turnaroundTime = 0;
 }
 process::process(string processID, int arrivalTime, int burstTime, int startTime, int priority)
 {
