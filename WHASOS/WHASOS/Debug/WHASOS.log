@@ -1,4 +1,10 @@
 ﻿  Home.cpp
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(7,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\Home.cpp(7,6): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  proc1.cpp
+  process.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\proc1.cpp(4,1): warning C4793: 'AddNumbers': function compiled as native:
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\proc1.cpp(4,1): warning C4793: 	Inline native assembly not supported in managed code
   Home.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  WHASOS.vcxproj -> C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\Debug\WHASOS.exe
+  WHASOS.vcxproj -> D:\assemply\CPU-scheduling\WHASOS\Debug\WHASOS.exe
