@@ -48,5 +48,34 @@ struct process
 		waitTime = 0;
 		lastRemainingBurst = burstTime;
 	};
+	// comrator for priority queue
+	bool operator<(const process& p) const
+	{
+		if (lastRemainingBurst == p.lastRemainingBurst)
+		{
+			if (arrivalTime == p.arrivalTime)
+			{
+				return processID > p.processID;
+			}
+			return arrivalTime > p.arrivalTime;
+		}
+		return lastRemainingBurst > p.lastRemainingBurst;
+	}
+};
+// custom comparator for priority;
+struct comparePriority
+{
+	bool operator()(process const& p1, process const& p2)
+	{
+		if (p1.priority == p2.priority)
+		{
+			if (p1.arrivalTime == p2.arrivalTime)
+			{
+				return p1.processID > p2.processID;
+			}
+			return p1.arrivalTime > p2.arrivalTime;
+		}
+		return p1.priority < p2.priority;
+	}
 };
 

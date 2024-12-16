@@ -41,5 +41,8 @@
     <ClInclude Include="proces.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SJFscheduler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

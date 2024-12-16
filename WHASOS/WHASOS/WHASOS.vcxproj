@@ -138,6 +138,7 @@
     </ClInclude>
     <ClInclude Include="proces.h" />
     <ClInclude Include="roundrobin.h" />
+    <ClInclude Include="SJFscheduler.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Home.resx">
