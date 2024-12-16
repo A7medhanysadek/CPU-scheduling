@@ -135,6 +135,7 @@
     </ClInclude>
     <ClInclude Include="process.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="roundrobin.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Home.resx">
