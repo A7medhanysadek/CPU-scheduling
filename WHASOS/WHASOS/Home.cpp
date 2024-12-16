@@ -11,4 +11,5 @@ void main(array<String^>^ args) {
     int result = AddNumbers(5, 5);
     WHASOS::Home frm;
     Application::Run(% frm);
+    WHASOS::Home::approach = "";
 }

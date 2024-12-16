@@ -16,6 +16,8 @@ namespace WHASOS {
 	public ref class Home : public System::Windows::Forms::Form
 	{
 	public:
+		static String^ approach;
+		
 		Home(void)
 		{
 			InitializeComponent();
@@ -499,6 +501,7 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 			this->comboBox11->Name = L"comboBox11";
 			this->comboBox11->Size = System::Drawing::Size(139, 24);
 			this->comboBox11->TabIndex = 12;
+			this->comboBox11->SelectedIndexChanged += gcnew System::EventHandler(this, &Home::comboBox11_SelectedIndexChanged);
 			// 
 			// lbla
 			// 
@@ -1346,9 +1349,10 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 #pragma endregion
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
 }
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		approach = this->comboBox11->Text;
 		MyForm1^ form1 = gcnew MyForm1();
 		form1->Show();
 	}
@@ -1472,6 +1476,8 @@ private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^
 	this->comboBox11->Visible = false;
 	this->label1->Visible = false;
 	this->button1->Visible = false;
+}
+private: System::Void comboBox11_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

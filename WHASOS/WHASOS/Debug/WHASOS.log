@@ -1,6 +1,8 @@
 ﻿  Home.cpp
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Home.cpp(8,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(21,27): error C2653: 'Home': is not a class or namespace name
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(21,33): error C2065: 'approach': undeclared identifier
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\Home.cpp(8,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
   MyForm3.cpp
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(21,27): error C2653: 'Home': is not a class or namespace name
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(21,33): error C2065: 'approach': undeclared identifier
   Generating Code...
-  Home.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  WHASOS.vcxproj -> C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\Debug\WHASOS.exe
