@@ -130,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FCFSscheduler.h" />
+    <ClInclude Include="FPJFscheduler.h" />
     <ClInclude Include="Home.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -137,7 +138,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="proces.h" />
-    <ClInclude Include="roundrobin.h" />
+    <ClInclude Include="RRscheduler.h" />
     <ClInclude Include="SJFscheduler.h" />
   </ItemGroup>
   <ItemGroup>

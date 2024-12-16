@@ -35,13 +35,16 @@
     <ClInclude Include="FCFSscheduler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="roundrobin.h">
+    <ClInclude Include="RRscheduler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="proces.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SJFscheduler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FPJFscheduler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

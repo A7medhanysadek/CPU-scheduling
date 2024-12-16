@@ -1,2 +1,3 @@
-﻿  WHASOS.vcxproj -> D:\assemply\CPU-scheduling\WHASOS\Debug\WHASOS.exe
+﻿  Home.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  WHASOS.vcxproj -> D:\assemply\CPU-scheduling\WHASOS\Debug\WHASOS.exe
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(5600,5): error MSB3541: Files has invalid value "<<<<<<< HEAD". Illegal characters in path.
