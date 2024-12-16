@@ -1,14 +1,11 @@
-#include "Home.h"
-#include "MyForm1.h"
+#include "MyForm.h"
 using namespace System;
 using namespace System::Windows::Forms;
-extern "C" int AddNumbers(int a, int b);
 [STAThreadAttribute]
 
 void main(array<String^>^ args) {
     Application::SetCompatibleTextRenderingDefault(false);
     Application::EnableVisualStyles();
-    int result = AddNumbers(5, 5);
-    WHASOS::Home frm;
+    WHASOS::MyForm frm;
     Application::Run(% frm);
 }
