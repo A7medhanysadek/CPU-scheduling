@@ -1,7 +1,11 @@
-#include "process.h"
+#pragma once
+#include "proces.h"
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <thread>
+#include <chrono>
+#include <algorithm>
 using namespace std;
 struct fcfs
 {
@@ -13,6 +17,9 @@ struct fcfs
 	int totalTurnaroundTime;
 	int totalResponseTime;
 	int totalProcesses;
+	string readyQueueString;
+	string finishedQueueString;
+	string currentProcessID;
 	fcfs(vector<process> processes)
 	{
 		this->processes = processes;
@@ -25,9 +32,11 @@ struct fcfs
 	void run()
 	{
 		int pointer = 0;
-		while (!processes.empty() || !readyQueue.empty())
+		sort(processes.begin(), processes.end(), [](process a, process b) {
+			return a.arrivalTime < b.arrivalTime;
+			});
+		while (pointer < processes.size() || !readyQueue.empty())
 		{
-			_sleep(50);
 			while (pointer < processes.size() && processes[pointer].arrivalTime <= currentTime)
 			{
 				readyQueue.push(processes[pointer]);
@@ -36,7 +45,10 @@ struct fcfs
 			if (!readyQueue.empty())
 			{
 				process currentProcess = readyQueue.front();
-				if (currentProcess.startTime != 0)
+				currentProcessID = currentProcess.processID;
+				readyQueueString = printreadyqueue();
+				finishedQueueString = printfinishedqueue();
+				if (currentProcess.startTime == 0)
 				{
 					currentProcess.startTime = currentTime;
 					totalResponseTime += currentProcess.startTime - currentProcess.arrivalTime;
@@ -58,8 +70,12 @@ struct fcfs
 				{
 					readyQueue.front() = currentProcess;
 				}
+				currentTime++;
+				this_thread::sleep_for(chrono::milliseconds(50));
 			}
 		}
+		readyQueueString = printreadyqueue();
+		finishedQueueString = printfinishedqueue();
 	}
 	string printreadyqueue()
 	{

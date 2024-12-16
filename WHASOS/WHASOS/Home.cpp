@@ -7,10 +7,8 @@ extern "C" int AddNumbers(int a, int b);
 void main(array<String^>^ args) {
     Application::SetCompatibleTextRenderingDefault(false);
     Application::EnableVisualStyles();
-    int result = AddNumbers(10, 5);
-	int x = 10;
-    MessageBox::Show("The result is: " + result, "Calculation Result");
-	// trying FCFSscheduler
+    int result = AddNumbers(5, 5);
     WHASOS::Home frm;
     Application::Run(% frm);
+    WHASOS::Home::approach = "";
 }
