@@ -13,6 +13,9 @@ struct fcfs
 	int totalTurnaroundTime;
 	int totalResponseTime;
 	int totalProcesses;
+	string readyQueueString;
+	string finishedQueueString;
+	string currentProcessID;
 	fcfs(vector<process> processes)
 	{
 		this->processes = processes;
@@ -25,9 +28,8 @@ struct fcfs
 	void run()
 	{
 		int pointer = 0;
-		while (!processes.empty() || !readyQueue.empty())
+		while (pointer < processes.size() || !readyQueue.empty())
 		{
-			_sleep(50);
 			while (pointer < processes.size() && processes[pointer].arrivalTime <= currentTime)
 			{
 				readyQueue.push(processes[pointer]);
@@ -36,6 +38,9 @@ struct fcfs
 			if (!readyQueue.empty())
 			{
 				process currentProcess = readyQueue.front();
+				currentProcessID = currentProcess.processID;
+				readyQueueString = printreadyqueue();
+				finishedQueueString = printfinishedqueue();
 				if (currentProcess.startTime != 0)
 				{
 					currentProcess.startTime = currentTime;
@@ -58,6 +63,8 @@ struct fcfs
 				{
 					readyQueue.front() = currentProcess;
 				}
+				currentTime++;
+				_sleep(50);
 			}
 		}
 	}

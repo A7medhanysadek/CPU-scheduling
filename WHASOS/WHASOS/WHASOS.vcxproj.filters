@@ -38,6 +38,9 @@
     <ClInclude Include="FCFSscheduler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="roundrobin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WHASOS.rc">
