@@ -2,11 +2,12 @@
 #include "LinkedList.h"
 using namespace std;
 
-void LinkedList::Display_List() {
+string LinkedList::Display_List() {
+    string listOfProcesses = "";
     for (Node *cur = head; cur; cur = cur->next) {
-        cout << cur->_process.processID << " ";
+        listOfProcesses += cur->_process.processID + " ";
     }
-    cout << endl;
+    return listOfProcesses;
 }
 
 void LinkedList::insert_end(process p) {

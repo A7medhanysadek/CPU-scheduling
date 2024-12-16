@@ -12,7 +12,7 @@ struct LinkedList {
     Node *head {};
     Node *tail {};
     int length = 0;
-    void Display_List();
+    string Display_List();
     void insert_end(process p);
     void delete_node(Node *node);
     void delete_end();

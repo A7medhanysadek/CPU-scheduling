@@ -16,14 +16,14 @@ bool ::Queue::empty() {
     return list.size() == 0;
 }
 
-string Queue::front() {
-    return list.head->_process.processID;
+process Queue::front() { // return process
+    return list.head->_process;
 }
 
-
-void ::Queue::display() {
-    list.Display_List();
+string Queue::display() {
+    return list.Display_List();
 }
+
 
 int :: Queue:: size() {
     return list.size();

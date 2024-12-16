@@ -10,10 +10,10 @@ struct Queue {
 
     void push(process p);
     void pop();
-    string front();
+    process front();
     int size();
     bool empty();
-    void display();
+    string display();
 };
 
 #endif //LINKEDLISTQUEUE_H
