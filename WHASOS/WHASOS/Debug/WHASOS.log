@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+﻿  Home.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  WHASOS.vcxproj -> D:\assemply\CPU-scheduling\WHASOS\Debug\WHASOS.exe
+=======
+<<<<<<< HEAD
 ﻿  Home.cpp
 D:\WHASOS\CPU-scheduling\WHASOS\WHASOS\Home.cpp(7,6): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
   proc1.cpp
@@ -11,5 +15,6 @@ D:\WHASOS\CPU-scheduling\WHASOS\WHASOS\proc1.cpp(4,1): warning C4793: 	Inline na
   WHASOS.vcxproj -> D:\WHASOS\CPU-scheduling\WHASOS\Debug\WHASOS.exe
 =======
 ﻿  WHASOS.vcxproj -> D:\assemply\CPU-scheduling\WHASOS\Debug\WHASOS.exe
+>>>>>>> b69d36765343a7c8c025788f6b61cd3ce79f4c9e
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(5600,5): error MSB3541: Files has invalid value "<<<<<<< HEAD". Illegal characters in path.
 >>>>>>> 8fcad76c54a324da6ab000584706094f7018ce66

@@ -4,6 +4,10 @@
   "Documents": [
     {
 <<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\FPJFscheduler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|solutionrelative:WHASOS\\FPJFscheduler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+=======
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|D:\\WHASOS\\CPU-scheduling\\WHASOS\\WHASOS\\process.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|solutionrelative:WHASOS\\process.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -17,15 +21,21 @@
 =======
       "AbsoluteMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\MyForm3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|solutionrelative:WHASOS\\MyForm3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+>>>>>>> b69d36765343a7c8c025788f6b61cd3ce79f4c9e
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\proces.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|solutionrelative:WHASOS\\proces.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\Home.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|solutionrelative:WHASOS\\Home.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\SJFscheduler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|solutionrelative:WHASOS\\SJFscheduler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\FCFSscheduler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|solutionrelative:WHASOS\\FCFSscheduler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+=======
       "AbsoluteMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\MyForm3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
       "RelativeMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|solutionrelative:WHASOS\\MyForm3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     },
@@ -37,6 +47,7 @@
       "AbsoluteMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\Home.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
       "RelativeMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|solutionrelative:WHASOS\\Home.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
 >>>>>>> 8fcad76c54a324da6ab000584706094f7018ce66
+>>>>>>> b69d36765343a7c8c025788f6b61cd3ce79f4c9e
     }
   ],
   "DocumentGroupContainers": [
@@ -46,6 +57,9 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
+          "SelectedChildIndex": 1,
+=======
 <<<<<<< HEAD
           "SelectedChildIndex": 3,
           "Children": [
@@ -66,6 +80,7 @@
               "WhenOpened": "2024-12-15T21:16:55.063Z"
 =======
           "SelectedChildIndex": 4,
+>>>>>>> b69d36765343a7c8c025788f6b61cd3ce79f4c9e
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,6 +89,8 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+=======
               "DocumentIndex": 1,
 <<<<<<< HEAD
               "Title": "FCFSscheduler.h",
@@ -119,15 +136,29 @@
             },
             {
               "$type": "Document",
+>>>>>>> b69d36765343a7c8c025788f6b61cd3ce79f4c9e
               "DocumentIndex": 0,
-              "Title": "MyForm3.h",
-              "DocumentMoniker": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\MyForm3.h",
-              "RelativeDocumentMoniker": "WHASOS\\MyForm3.h",
-              "ToolTip": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\MyForm3.h",
-              "RelativeToolTip": "WHASOS\\MyForm3.h",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
+              "Title": "FPJFscheduler.h",
+              "DocumentMoniker": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\FPJFscheduler.h",
+              "RelativeDocumentMoniker": "WHASOS\\FPJFscheduler.h",
+              "ToolTip": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\FPJFscheduler.h",
+              "RelativeToolTip": "WHASOS\\FPJFscheduler.h",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-16T12:55:04.569Z",
+              "WhenOpened": "2024-12-16T16:04:25.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "proces.h",
+              "DocumentMoniker": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\proces.h",
+              "RelativeDocumentMoniker": "WHASOS\\proces.h",
+              "ToolTip": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\proces.h",
+              "RelativeToolTip": "WHASOS\\proces.h",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-16T15:26:40.017Z",
               "EditorCaption": ""
             },
             {
@@ -142,6 +173,14 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
 =======
               "DocumentIndex": 2,
+<<<<<<< HEAD
+              "Title": "SJFscheduler.h",
+              "DocumentMoniker": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\SJFscheduler.h",
+              "RelativeDocumentMoniker": "WHASOS\\SJFscheduler.h",
+              "ToolTip": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\SJFscheduler.h",
+              "RelativeToolTip": "WHASOS\\SJFscheduler.h",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAkwGwAAAAAAAAAAAAAAA==",
+=======
               "Title": "Home.h",
               "DocumentMoniker": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\Home.h",
               "RelativeDocumentMoniker": "WHASOS\\Home.h",
@@ -149,21 +188,21 @@
               "RelativeToolTip": "WHASOS\\Home.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
 >>>>>>> 8fcad76c54a324da6ab000584706094f7018ce66
+>>>>>>> b69d36765343a7c8c025788f6b61cd3ce79f4c9e
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-16T10:54:10.518Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:20:21Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Home.h [Design]",
-              "DocumentMoniker": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\Home.h",
-              "RelativeDocumentMoniker": "WHASOS\\Home.h",
-              "ToolTip": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\Home.h [Design]",
-              "RelativeToolTip": "WHASOS\\Home.h [Design]",
+              "DocumentIndex": 3,
+              "Title": "FCFSscheduler.h",
+              "DocumentMoniker": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\FCFSscheduler.h",
+              "RelativeDocumentMoniker": "WHASOS\\FCFSscheduler.h",
+              "ToolTip": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\FCFSscheduler.h",
+              "RelativeToolTip": "WHASOS\\FCFSscheduler.h",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAkwGoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-16T10:51:29.268Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-16T13:20:33.605Z"
             }
           ]
         }
