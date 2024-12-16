@@ -2,7 +2,11 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+<<<<<<< HEAD
+      <FullPath>C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\Debug\WHASOS.exe</FullPath>
+=======
       <FullPath>D:\assemply\CPU-scheduling\WHASOS\Debug\WHASOS.exe</FullPath>
+>>>>>>> 7fd2e3eee05720b2e4397396355667b06960b2dc
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

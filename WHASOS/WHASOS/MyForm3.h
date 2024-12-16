@@ -18,6 +18,7 @@ namespace WHASOS {
 		MyForm1(void)
 		{
 			InitializeComponent();
+			this->textBox2->Text = Home::approach;
 			//
 			//TODO: Add the constructor code here
 			//
@@ -192,6 +193,7 @@ namespace WHASOS {
 			this->progressBar1->Name = L"progressBar1";
 			this->progressBar1->Size = System::Drawing::Size(248, 23);
 			this->progressBar1->TabIndex = 2;
+			this->progressBar1->Click += gcnew System::EventHandler(this, &MyForm1::progressBar1_Click);
 			// 
 			// progressBar2
 			// 
@@ -736,6 +738,8 @@ namespace WHASOS {
 	private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void label27_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void progressBar1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
