@@ -127,7 +127,6 @@
     <ClCompile Include="Home.cpp" />
     <ClCompile Include="MyForm3.cpp" />
     <ClCompile Include="proc1.cpp" />
-    <ClCompile Include="process.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FCFSscheduler.h" />
@@ -137,7 +136,7 @@
     <ClInclude Include="MyForm3.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="process.h" />
+    <ClInclude Include="proces.h" />
     <ClInclude Include="roundrobin.h" />
   </ItemGroup>
   <ItemGroup>
