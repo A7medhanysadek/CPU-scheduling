@@ -1,5 +1,4 @@
 #pragma once
-
 namespace WHASOS {
 
 	using namespace System;
@@ -15,10 +14,10 @@ namespace WHASOS {
 	public ref class MyForm1 : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm1(void)
+		MyForm1(String^ st)
 		{
 			InitializeComponent();
-			this->textBox2->Text = Home::approach;
+			this->textBox2->Text = st;
 			//
 			//TODO: Add the constructor code here
 			//
