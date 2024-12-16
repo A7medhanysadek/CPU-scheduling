@@ -1,4 +1,5 @@
 ﻿  Home.cpp
+<<<<<<< HEAD
 C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(21,27): error C2653: 'Home': is not a class or namespace name
 C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(21,33): error C2065: 'approach': undeclared identifier
 C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\Home.cpp(8,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
@@ -6,3 +7,14 @@ C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات
 C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(21,27): error C2653: 'Home': is not a class or namespace name
 C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(21,33): error C2065: 'approach': undeclared identifier
   Generating Code...
+=======
+  MyForm3.cpp
+  proc1.cpp
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\Home.cpp(8,6): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\proc1.cpp(4,1): warning C4793: 'AddNumbers': function compiled as native:
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\proc1.cpp(4,1): warning C4793: 	Inline native assembly not supported in managed code
+  Home.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  WHASOS.vcxproj -> D:\assemply\CPU-scheduling\WHASOS\Debug\WHASOS.exe
+>>>>>>> 7fd2e3eee05720b2e4397396355667b06960b2dc

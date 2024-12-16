@@ -1,7 +1,11 @@
-#include "process.h"
+#pragma once
+#include "proces.h"
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <thread>
+#include <chrono>
+#include <algorithm>
 using namespace std;
 struct fcfs
 {
@@ -28,6 +32,9 @@ struct fcfs
 	void run()
 	{
 		int pointer = 0;
+		sort(processes.begin(), processes.end(), [](process a, process b) {
+			return a.arrivalTime < b.arrivalTime;
+			});
 		while (pointer < processes.size() || !readyQueue.empty())
 		{
 			while (pointer < processes.size() && processes[pointer].arrivalTime <= currentTime)
@@ -41,7 +48,7 @@ struct fcfs
 				currentProcessID = currentProcess.processID;
 				readyQueueString = printreadyqueue();
 				finishedQueueString = printfinishedqueue();
-				if (currentProcess.startTime != 0)
+				if (currentProcess.startTime == 0)
 				{
 					currentProcess.startTime = currentTime;
 					totalResponseTime += currentProcess.startTime - currentProcess.arrivalTime;
@@ -64,9 +71,11 @@ struct fcfs
 					readyQueue.front() = currentProcess;
 				}
 				currentTime++;
-				_sleep(50);
+				this_thread::sleep_for(chrono::milliseconds(50));
 			}
 		}
+		readyQueueString = printreadyqueue();
+		finishedQueueString = printfinishedqueue();
 	}
 	string printreadyqueue()
 	{
