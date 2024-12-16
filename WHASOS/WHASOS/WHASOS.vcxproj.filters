@@ -24,6 +24,12 @@
     <ClCompile Include="MyForm3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="proc2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="proc3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Home.h">

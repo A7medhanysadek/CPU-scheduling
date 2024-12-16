@@ -1,6 +1,7 @@
 #pragma once
 #include "MyForm3.h"
-
+extern "C" int AddNumbers(int a, int b);
+extern "C" int gcd(long long a, long long b);
 
 namespace WHASOS {
 
@@ -206,6 +207,17 @@ private: System::Windows::Forms::TextBox^ textBoxp7;
 private: System::Windows::Forms::TextBox^ textBoxp8;
 private: System::Windows::Forms::TextBox^ textBoxp9;
 private: System::Windows::Forms::TextBox^ textBoxp10;
+private: System::Windows::Forms::Label^ label2;
+private: System::Windows::Forms::Label^ label3;
+private: System::Windows::Forms::Label^ label4;
+private: System::Windows::Forms::Label^ label5;
+private: System::Windows::Forms::Label^ label6;
+private: System::Windows::Forms::Label^ label7;
+private: System::Windows::Forms::Label^ label8;
+private: System::Windows::Forms::Label^ label9;
+private: System::Windows::Forms::Label^ label10;
+private: System::Windows::Forms::Label^ label11;
+private: System::Windows::Forms::Label^ label12;
 
 
 
@@ -336,6 +348,17 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 			this->textBoxp8 = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxp9 = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxp10 = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// timer1
@@ -355,10 +378,7 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 			// comboBoxp1
 			// 
 			this->comboBoxp1->FormattingEnabled = true;
-			this->comboBoxp1->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Adding two numbers", L"String concatenation",
-					L"finding vowels"
-			});
+			this->comboBoxp1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
 			this->comboBoxp1->Location = System::Drawing::Point(1222, 142);
 			this->comboBoxp1->Name = L"comboBoxp1";
 			this->comboBoxp1->Size = System::Drawing::Size(121, 24);
@@ -368,10 +388,7 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 			// comboBoxP2
 			// 
 			this->comboBoxP2->FormattingEnabled = true;
-			this->comboBoxP2->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Adding two numbers", L"String concatenation",
-					L"finding vowels"
-			});
+			this->comboBoxP2->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
 			this->comboBoxP2->Location = System::Drawing::Point(1222, 192);
 			this->comboBoxP2->Name = L"comboBoxP2";
 			this->comboBoxP2->Size = System::Drawing::Size(121, 24);
@@ -381,10 +398,7 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 			// comboBoxp3
 			// 
 			this->comboBoxp3->FormattingEnabled = true;
-			this->comboBoxp3->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Adding two numbers", L"String concatenation",
-					L"finding vowels"
-			});
+			this->comboBoxp3->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
 			this->comboBoxp3->Location = System::Drawing::Point(1222, 243);
 			this->comboBoxp3->Name = L"comboBoxp3";
 			this->comboBoxp3->Size = System::Drawing::Size(121, 24);
@@ -394,10 +408,7 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 			// comboBoxp4
 			// 
 			this->comboBoxp4->FormattingEnabled = true;
-			this->comboBoxp4->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Adding two numbers", L"String concatenation",
-					L"finding vowels"
-			});
+			this->comboBoxp4->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
 			this->comboBoxp4->Location = System::Drawing::Point(1222, 291);
 			this->comboBoxp4->Name = L"comboBoxp4";
 			this->comboBoxp4->Size = System::Drawing::Size(121, 24);
@@ -407,10 +418,7 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 			// comboBoxp5
 			// 
 			this->comboBoxp5->FormattingEnabled = true;
-			this->comboBoxp5->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Adding two numbers", L"String concatenation",
-					L"finding vowels"
-			});
+			this->comboBoxp5->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
 			this->comboBoxp5->Location = System::Drawing::Point(1222, 334);
 			this->comboBoxp5->Name = L"comboBoxp5";
 			this->comboBoxp5->Size = System::Drawing::Size(121, 24);
@@ -420,10 +428,7 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 			// comboBoxp6
 			// 
 			this->comboBoxp6->FormattingEnabled = true;
-			this->comboBoxp6->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Adding two numbers", L"String concatenation",
-					L"finding vowels"
-			});
+			this->comboBoxp6->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
 			this->comboBoxp6->Location = System::Drawing::Point(1222, 378);
 			this->comboBoxp6->Name = L"comboBoxp6";
 			this->comboBoxp6->Size = System::Drawing::Size(121, 24);
@@ -433,10 +438,7 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 			// comboBoxp7
 			// 
 			this->comboBoxp7->FormattingEnabled = true;
-			this->comboBoxp7->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Adding two numbers", L"String concatenation",
-					L"finding vowels"
-			});
+			this->comboBoxp7->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
 			this->comboBoxp7->Location = System::Drawing::Point(1222, 420);
 			this->comboBoxp7->Name = L"comboBoxp7";
 			this->comboBoxp7->Size = System::Drawing::Size(121, 24);
@@ -446,10 +448,7 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 			// comboBoxp8
 			// 
 			this->comboBoxp8->FormattingEnabled = true;
-			this->comboBoxp8->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Adding two numbers", L"String concatenation",
-					L"finding vowels"
-			});
+			this->comboBoxp8->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
 			this->comboBoxp8->Location = System::Drawing::Point(1222, 462);
 			this->comboBoxp8->Name = L"comboBoxp8";
 			this->comboBoxp8->Size = System::Drawing::Size(121, 24);
@@ -459,10 +458,7 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 			// comboBoxp9
 			// 
 			this->comboBoxp9->FormattingEnabled = true;
-			this->comboBoxp9->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Adding two numbers", L"String concatenation",
-					L"finding vowels"
-			});
+			this->comboBoxp9->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
 			this->comboBoxp9->Location = System::Drawing::Point(1222, 505);
 			this->comboBoxp9->Name = L"comboBoxp9";
 			this->comboBoxp9->Size = System::Drawing::Size(121, 24);
@@ -472,10 +468,7 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 			// comboBoxp10
 			// 
 			this->comboBoxp10->FormattingEnabled = true;
-			this->comboBoxp10->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Adding two numbers", L"String concatenation",
-					L"finding vowels"
-			});
+			this->comboBoxp10->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
 			this->comboBoxp10->Location = System::Drawing::Point(1222, 548);
 			this->comboBoxp10->Name = L"comboBoxp10";
 			this->comboBoxp10->Size = System::Drawing::Size(121, 24);
@@ -1244,12 +1237,132 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 			this->textBoxp10->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->textBoxp10->Visible = false;
 			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(1685, 105);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(50, 17);
+			this->label2->TabIndex = 89;
+			this->label2->Text = L"output";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(1685, 148);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(42, 17);
+			this->label3->TabIndex = 90;
+			this->label3->Text = L"label3";
+			this->label3->Visible = false;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(1688, 192);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(42, 17);
+			this->label4->TabIndex = 91;
+			this->label4->Text = L"label4";
+			this->label4->Visible = false;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(1681, 243);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(42, 17);
+			this->label5->TabIndex = 92;
+			this->label5->Text = L"label5";
+			this->label5->Visible = false;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(1681, 290);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(42, 17);
+			this->label6->TabIndex = 93;
+			this->label6->Text = L"label6";
+			this->label6->Visible = false;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(1681, 336);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(42, 17);
+			this->label7->TabIndex = 94;
+			this->label7->Text = L"label7";
+			this->label7->Visible = false;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(1688, 384);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(42, 17);
+			this->label8->TabIndex = 95;
+			this->label8->Text = L"label8";
+			this->label8->Visible = false;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(1685, 427);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(42, 17);
+			this->label9->TabIndex = 96;
+			this->label9->Text = L"label9";
+			this->label9->Visible = false;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(1681, 468);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(50, 17);
+			this->label10->TabIndex = 97;
+			this->label10->Text = L"label10";
+			this->label10->Visible = false;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(1680, 508);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(50, 17);
+			this->label11->TabIndex = 98;
+			this->label11->Text = L"label11";
+			this->label11->Visible = false;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(1681, 548);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(50, 17);
+			this->label12->TabIndex = 99;
+			this->label12->Text = L"label12";
+			this->label12->Visible = false;
+			// 
 			// Home
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(7, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1790, 985);
+			this->Controls->Add(this->label12);
+			this->Controls->Add(this->label11);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textBoxp10);
 			this->Controls->Add(this->textBoxp9);
 			this->Controls->Add(this->textBoxp8);
@@ -1353,6 +1466,16 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
 }
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->label3->Visible = lblp1->Visible;
+		this->label4->Visible = lblp2->Visible;
+		this->label5->Visible = lblp3->Visible;
+		this->label6->Visible = lblp4->Visible;
+		this->label7->Visible = lblp5->Visible;
+		this->label8->Visible = lblp6->Visible;
+		this->label9->Visible = lblp7->Visible;
+		this->label10->Visible = lblp8->Visible;
+		this->label11->Visible = lblp9->Visible;
+		this->label12->Visible = lblp10->Visible;
 		MyForm1 ^ form1 = gcnew MyForm1(this->comboBox11->Text);
 		form1->Show();
 	}
@@ -1361,6 +1484,15 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (this->comboBoxp1->Text=="Adding two numbers")
+	{
+		label3->Text = AddNumbers(Int32::Parse(this->textBoxI1p1->Text), Int32::Parse(this->textBoxI2p1->Text)).ToString();
+	}
+	else if (this->comboBoxp1->Text=="gcd")
+	{
+		label3->Text = gcd(Int32::Parse(this->textBoxI1p1->Text), Int32::Parse(this->textBoxI2p1->Text)).ToString();
+	}
+	
 	this->textBoxp2->Visible = true;
 	this->textBoxAp2->Visible = true;
 	this->textBoxBp2->Visible = true;

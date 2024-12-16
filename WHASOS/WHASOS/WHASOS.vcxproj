@@ -127,6 +127,8 @@
     <ClCompile Include="Home.cpp" />
     <ClCompile Include="MyForm3.cpp" />
     <ClCompile Include="proc1.cpp" />
+    <ClCompile Include="proc2.cpp" />
+    <ClCompile Include="proc3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FCFSscheduler.h" />
