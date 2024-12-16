@@ -1,6 +1,7 @@
 #pragma once
 #include "FCFSscheduler.h"
 #include <vector>
+#include <map>
 namespace WHASOS {
 
 	using namespace System;
@@ -9,21 +10,74 @@ namespace WHASOS {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
+	struct CompareByValue {
+		bool operator()(const process& a, const process& b) const {
+			return a.arrivalTime < b.arrivalTime;
+		}
+	};
 	/// <summary>
 	/// Summary for MyForm1
 	/// </summary>
 	public ref class MyForm1 : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm1()
+		MyForm1(String^ st)
 		{
-			vector<process> v;
 			InitializeComponent();
-			/*this->textBox2->Text = st;*/
+			this->textBox2->Text = st;
+			vector<process> v;
+			runfcfs(v);
 			//
 			//TODO: Add the constructor code here
 			//
+		}
+		void runfcfs(vector<process> v)
+		{
+			fcfs f(v);
+			int pointer = 0;
+			sort(f.processes.begin(), f.processes.end(), CompareByValue());
+				this->progressBar1->Increment(50);
+			while (pointer < f.processes.size() || !f.readyQueue.empty())
+			{
+				while (pointer < f.processes.size() && f.processes[pointer].arrivalTime <= f.currentTime)
+				{
+					f.readyQueue.push(f.processes[pointer]);
+					pointer++;
+				}
+				if (!f.readyQueue.empty())
+				{
+					process currentProcess = f.readyQueue.front();
+					f.currentProcessID = currentProcess.processID;
+					f.readyQueueString = f.printreadyqueue();
+					f.finishedQueueString = f.printfinishedqueue();
+					if (currentProcess.startTime == 0)
+					{
+						currentProcess.startTime = f.currentTime;
+						f.totalResponseTime += currentProcess.startTime - currentProcess.arrivalTime;
+					}
+					currentProcess.lastRemainingBurst--;
+					currentProcess.pBarValue = 100 - (currentProcess.lastRemainingBurst * 100 / currentProcess.burstTime);
+					if (currentProcess.lastRemainingBurst == 0)
+					{
+						currentProcess.endTime = f.currentTime + 1;
+						currentProcess.waitTime = currentProcess.endTime - currentProcess.arrivalTime - currentProcess.burstTime;
+						currentProcess.turnaroundTime = currentProcess.endTime - currentProcess.arrivalTime;
+						currentProcess.pBarValue = 100;
+						f.totalWaitTime += currentProcess.waitTime;
+						f.totalTurnaroundTime += currentProcess.turnaroundTime;
+						f.finishedQueue.push(currentProcess);
+						f.readyQueue.pop();
+					}
+					else
+					{
+						f.readyQueue.front() = currentProcess;
+					}
+					f.currentTime++;
+					this_thread::sleep_for(chrono::milliseconds(50));
+				}
+			}
+			f.readyQueueString = f.printreadyqueue();
+			f.finishedQueueString = f.printfinishedqueue();
 		}
 
 	protected:

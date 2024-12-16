@@ -7,7 +7,6 @@
 #include <chrono>
 #include <algorithm>
 #include "MyForm3.h"
-using namespace WHASOS;
 struct fcfs
 {
 	vector<process> processes;
@@ -29,56 +28,6 @@ struct fcfs
 		totalTurnaroundTime = 0;
 		totalResponseTime = 0;
 		totalProcesses = processes.size();
-	}
-	void run()
-	{
-		MyForm1^ form1 = gcnew MyForm1();
-		form1->Show();
-		int pointer = 0;
-		sort(processes.begin(), processes.end(), [](process a, process b) {
-			return a.arrivalTime < b.arrivalTime;
-			});
-		while (pointer < processes.size() || !readyQueue.empty())
-		{
-			while (pointer < processes.size() && processes[pointer].arrivalTime <= currentTime)
-			{
-				readyQueue.push(processes[pointer]);
-				pointer++;
-			}
-			if (!readyQueue.empty())
-			{
-				process currentProcess = readyQueue.front();
-				currentProcessID = currentProcess.processID;
-				readyQueueString = printreadyqueue();
-				finishedQueueString = printfinishedqueue();
-				if (currentProcess.startTime == 0)
-				{
-					currentProcess.startTime = currentTime;
-					totalResponseTime += currentProcess.startTime - currentProcess.arrivalTime;
-				}
-				currentProcess.lastRemainingBurst--;
-				currentProcess.pBarValue = 100 - (currentProcess.lastRemainingBurst * 100 / currentProcess.burstTime);
-				if (currentProcess.lastRemainingBurst == 0)
-				{
-					currentProcess.endTime = currentTime + 1;
-					currentProcess.waitTime = currentProcess.endTime - currentProcess.arrivalTime - currentProcess.burstTime;
-					currentProcess.turnaroundTime = currentProcess.endTime - currentProcess.arrivalTime;
-					currentProcess.pBarValue = 100;
-					totalWaitTime += currentProcess.waitTime;
-					totalTurnaroundTime += currentProcess.turnaroundTime;
-					finishedQueue.push(currentProcess);
-					readyQueue.pop();
-				}
-				else
-				{
-					readyQueue.front() = currentProcess;
-				}
-				currentTime++;
-				this_thread::sleep_for(chrono::milliseconds(50));
-			}
-		}
-		readyQueueString = printreadyqueue();
-		finishedQueueString = printfinishedqueue();
 	}
 	string printreadyqueue()
 	{

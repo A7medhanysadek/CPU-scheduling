@@ -1,17 +1,10 @@
 ﻿  Home.cpp
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(10,17): error C2871: 'WHASOS': a namespace with this name does not exist
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(35,3): error C2065: 'MyForm1': undeclared identifier
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(35,12): error C2065: 'form1': undeclared identifier
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(35,26): error C2061: syntax error: identifier 'MyForm1'
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(36,3): error C2065: 'form1': undeclared identifier
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(41,18): warning C4018: '<': signed/unsigned mismatch
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(43,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(40,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(42,20): warning C4018: '<': signed/unsigned mismatch
   MyForm3.cpp
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(10,17): error C2871: 'WHASOS': a namespace with this name does not exist
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(35,3): error C2065: 'MyForm1': undeclared identifier
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(35,12): error C2065: 'form1': undeclared identifier
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(35,26): error C2061: syntax error: identifier 'MyForm1'
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(36,3): error C2065: 'form1': undeclared identifier
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(41,18): warning C4018: '<': signed/unsigned mismatch
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\FCFSscheduler.h(43,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(40,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(42,20): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
+  Home.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  WHASOS.vcxproj -> C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\Debug\WHASOS.exe
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(5445,5): error MSB3541: Files has invalid value "<<<<<<< HEAD". Illegal characters in path.
