@@ -6,7 +6,8 @@
 #include <thread>
 #include <chrono>
 #include <algorithm>
-using namespace std;
+#include "MyForm3.h"
+using namespace WHASOS;
 struct fcfs
 {
 	vector<process> processes;
@@ -31,6 +32,8 @@ struct fcfs
 	}
 	void run()
 	{
+		MyForm1^ form1 = gcnew MyForm1();
+		form1->Show();
 		int pointer = 0;
 		sort(processes.begin(), processes.end(), [](process a, process b) {
 			return a.arrivalTime < b.arrivalTime;

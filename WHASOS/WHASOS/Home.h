@@ -1,5 +1,8 @@
 #pragma once
 #include "MyForm3.h"
+#include "FCFSscheduler.h"
+#include <vector>
+#include "proces.h"
 extern "C" int AddNumbers(int a, int b);
 extern "C" int gcd(long long a, long long b);
 
@@ -218,6 +221,7 @@ private: System::Windows::Forms::Label^ label9;
 private: System::Windows::Forms::Label^ label10;
 private: System::Windows::Forms::Label^ label11;
 private: System::Windows::Forms::Label^ label12;
+
 
 
 
@@ -1476,8 +1480,11 @@ private: System::Windows::Forms::Label^ label12;
 		this->label10->Visible = lblp8->Visible;
 		this->label11->Visible = lblp9->Visible;
 		this->label12->Visible = lblp10->Visible;
-		MyForm1 ^ form1 = gcnew MyForm1(this->comboBox11->Text);
-		form1->Show();
+		/*MyForm1 ^ form1 = gcnew MyForm1(this->comboBox11->Text);
+		form1->Show();*/
+		vector<process> v;
+		fcfs ff(v);
+		ff.run();
 	}
 	private: System::Void Home_Load(System::Object^ sender, System::EventArgs^ e) {
 	}

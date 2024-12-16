@@ -1,4 +1,6 @@
 #pragma once
+#include "FCFSscheduler.h"
+#include <vector>
 namespace WHASOS {
 
 	using namespace System;
@@ -14,10 +16,11 @@ namespace WHASOS {
 	public ref class MyForm1 : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm1(String^ st)
+		MyForm1()
 		{
+			vector<process> v;
 			InitializeComponent();
-			this->textBox2->Text = st;
+			/*this->textBox2->Text = st;*/
 			//
 			//TODO: Add the constructor code here
 			//
@@ -34,7 +37,7 @@ namespace WHASOS {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::TextBox^ textBox1;
+	public: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::ProgressBar^ progressBar1;
 	private: System::Windows::Forms::ProgressBar^ progressBar2;
