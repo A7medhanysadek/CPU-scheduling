@@ -2,3 +2,7 @@ C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات
 C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Debug\WHASOS.Home.resources
 C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Debug\WHASOS.vcxproj.GenerateResource.cache
 C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\Assembly\WHASOS\WHASOS\Debug\WHASOS.MyForm3.resources
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.vcxproj.AssemblyReference.cache
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.Home.resources
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.MyForm3.resources
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.vcxproj.GenerateResource.cache
