@@ -20,6 +20,12 @@ This project aims to simulate how the CPU manages tasks using various algorithms
  
 - Custom Data Structures 🛠️: Implemented custom data structures such as Queue and Priority Queue to efficiently manage processes and simulate the scheduling algorithms. These data structures were built from scratch to suit the project’s requirements.
 
+## ⚙ Technologies Used
+- C++ for core logic implementation
+- WinForms for graphical user interface (GUI)
+- Assembly to handle Processes
+
+
 
 
 
