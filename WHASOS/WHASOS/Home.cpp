@@ -1,5 +1,4 @@
 #include "Home.h"
-#include "MyForm1.h"
 using namespace System;
 using namespace System::Windows::Forms;
 extern "C" int AddNumbers(int a, int b);

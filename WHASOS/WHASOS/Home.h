@@ -1,6 +1,7 @@
 #pragma once
 #include "MyForm3.h"
 
+
 namespace WHASOS {
 
 	using namespace System;
@@ -16,7 +17,7 @@ namespace WHASOS {
 	public ref class Home : public System::Windows::Forms::Form
 	{
 	public:
-		static String^ approach;
+		static System :: String^ approach;
 		
 		Home(void)
 		{
@@ -1352,8 +1353,7 @@ private: System::Windows::Forms::TextBox^ textBoxp10;
 	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
 }
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		approach = this->comboBox11->Text;
-		MyForm1^ form1 = gcnew MyForm1();
+		MyForm1 ^ form1 = gcnew MyForm1(this->comboBox11->Text);
 		form1->Show();
 	}
 	private: System::Void Home_Load(System::Object^ sender, System::EventArgs^ e) {
