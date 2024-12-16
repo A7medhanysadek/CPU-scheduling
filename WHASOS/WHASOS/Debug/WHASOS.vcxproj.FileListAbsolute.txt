@@ -12,4 +12,10 @@ D:\assemply\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.vcxproj.AssemblyReference.
 D:\assemply\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.Home.resources
 D:\assemply\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.MyForm3.resources
 D:\assemply\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.vcxproj.GenerateResource.cache
+<<<<<<< HEAD
+D:\WHASOS\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.vcxproj.AssemblyReference.cache
+D:\WHASOS\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.Home.resources
+D:\WHASOS\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.vcxproj.GenerateResource.cache
+=======
 >>>>>>> 7fd2e3eee05720b2e4397396355667b06960b2dc
+>>>>>>> 8fcad76c54a324da6ab000584706094f7018ce66
