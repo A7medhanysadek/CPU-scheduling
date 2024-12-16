@@ -1,4 +1,5 @@
 #include "process.h"
+using namespace std;
 
 process::process() {
 	processID = "";

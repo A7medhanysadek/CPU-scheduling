@@ -4,3 +4,6 @@ C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات
 D:\assemply\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.vcxproj.AssemblyReference.cache
 D:\assemply\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.Home.resources
 D:\assemply\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.vcxproj.GenerateResource.cache
+D:\WHASOS\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.vcxproj.AssemblyReference.cache
+D:\WHASOS\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.Home.resources
+D:\WHASOS\CPU-scheduling\WHASOS\WHASOS\Debug\WHASOS.vcxproj.GenerateResource.cache
