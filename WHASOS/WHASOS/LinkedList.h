@@ -1,6 +1,6 @@
 #ifndef QUEUE_H
 #define QUEUE_H
-#include "process.h"
+#include "proces.h"
 
 struct Node {
     process _process;
