@@ -61,6 +61,16 @@ struct process
 		}
 		return lastRemainingBurst > p.lastRemainingBurst;
 	}
+	bool operator>(const process& p) const {
+		if (lastRemainingBurst == p.lastRemainingBurst) {
+			if (arrivalTime == p.arrivalTime) {
+				return processID < p.processID; // Reverse of '<' for processID
+			}
+			return arrivalTime < p.arrivalTime; // Reverse of '<' for arrivalTime
+		}
+		return lastRemainingBurst < p.lastRemainingBurst; // Reverse of '<' for lastRemainingBurst
+	}
+
 };
 // custom comparator for priority;
 struct comparePriority
