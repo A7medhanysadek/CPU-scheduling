@@ -4,6 +4,7 @@
 #include <vector>
 #include <map>
 #include <string>
+#include <Thread>
 
 namespace WHASOS {
 	using namespace System;
@@ -57,92 +58,108 @@ namespace WHASOS {
 			line l8(this->label25, this->label35, this->progressBar8);
 			line l9(this->label26, this->label36, this->progressBar9);
 			line l10(this->label27, this->label37, this->progressBar10);
-			runfcfs(v);
+			run(v);
 			//
 			//TODO: Add the constructor code here
 			//
 		}
-		void runfcfs(vector<process> v)
+		void run(vector<process> v)
 		{
-			// fcfs approach
+			int pointer = 0;
 			fcfs f(v);
-			int index = 0;
-			while (index < f.processes.size() && !f.readyQueue.empty())
+			/*sort(f.processes.begin(), f.processes.end(), [](process a, process b) {
+				return a.arrivalTime < b.arrivalTime;
+				});*/
+			while (pointer < f.processes.size() || !f.readyQueue.empty())
 			{
-				while (index<f.processes.size() && f.processes[index].arrivalTime == f.currentTime)
+				while (pointer < f.processes.size() && f.processes[pointer].arrivalTime <= f.currentTime)
 				{
-					f.readyQueue.push(f.processes[index]);
-					index++;
+					f.readyQueue.push(f.processes[pointer]);
+					pointer++;
 				}
 				if (!f.readyQueue.empty())
 				{
-					if (f.readyQueue.front().lastRemainingBurst)
+					process currentProcess = f.readyQueue.front();
+					f.currentProcessID = currentProcess.processID;
+					f.readyQueueString = f.printreadyqueue();
+					f.finishedQueueString = f.printfinishedqueue();
+					if (currentProcess.startTime == 0)
 					{
-						f.readyQueue.front().lastRemainingBurst--;
-						f.readyQueue.front().pBarValue = (f.readyQueue.front().burstTime - f.readyQueue.front().lastRemainingBurst) * 100 / f.readyQueue.front().burstTime;
-						f.currentProcessID = f.readyQueue.front().processID;
-						if (f.currentProcessID == "P1")
-						{
-							this->progressBar1->Value = f.readyQueue.front().pBarValue;
-							this->label18->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
-						}
-						else if (f.currentProcessID == "P2")
-						{
-							this->progressBar2->Value = f.readyQueue.front().pBarValue;
-							this->label19->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
-						}
-						else if (f.currentProcessID == "P3")
-						{
-							this->progressBar3->Value = f.readyQueue.front().pBarValue;
-							this->label20->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
-						}
-						else if (f.currentProcessID == "P4")
-						{
-							this->progressBar4->Value = f.readyQueue.front().pBarValue;
-							this->label21->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
-						}
-						else if (f.currentProcessID == "P5")
-						{
-							this->progressBar5->Value = f.readyQueue.front().pBarValue;
-							this->label22->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
-						}
-						else if (f.currentProcessID == "P6")
-						{
-							this->progressBar6->Value = f.readyQueue.front().pBarValue;
-							this->label23->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
-						}
-						else if (f.currentProcessID == "P7")
-						{
-							this->progressBar7->Value = f.readyQueue.front().pBarValue;
-							this->label24->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
-						}
-						else if (f.currentProcessID == "P8")
-						{
-							this->progressBar8->Value = f.readyQueue.front().pBarValue;
-							this->label25->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
-						}
-						else if (f.currentProcessID == "P9")
-						{
-							this->progressBar9->Value = f.readyQueue.front().pBarValue;
-							this->label26->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
-						}
-						else if (f.currentProcessID == "P10")
-						{
-							this->progressBar10->Value = f.readyQueue.front().pBarValue;
-							this->label27->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
-						}
-
+						currentProcess.startTime = f.currentTime;
+						f.totalResponseTime += currentProcess.startTime - currentProcess.arrivalTime;
+					}
+					currentProcess.lastRemainingBurst--;
+					currentProcess.pBarValue = 100 - (currentProcess.lastRemainingBurst * 100 / currentProcess.burstTime);
+					if (currentProcess.processID=="P1")
+					{
+						this->label18->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar1->Value = currentProcess.pBarValue;
+						
+					}
+					else if (currentProcess.processID == "P2")
+					{
+						this->label19->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar2->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P3")
+					{
+						this->label20->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar3->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P4")
+					{
+						this->label21->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar4->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P5")
+					{
+						this->label22->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar5->Value = currentProcess.pBarValue;
+					}else if (currentProcess.processID == "P6")
+					{
+						this->label23->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar6->Value = currentProcess.pBarValue;
+					}else if (currentProcess.processID == "P7")
+					{
+						this->label24->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar7->Value = currentProcess.pBarValue;
+					}else if (currentProcess.processID == "P8")
+					{
+						this->label25->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar8->Value = currentProcess.pBarValue;
+					}else if (currentProcess.processID == "P9")
+					{
+						this->label26->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar9->Value = currentProcess.pBarValue;
+					}else if (currentProcess.processID == "P10")
+					{
+						this->label27->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar10->Value = currentProcess.pBarValue;
+					}
+					if (currentProcess.lastRemainingBurst == 0)
+					{
+						currentProcess.endTime = f.currentTime + 1;
+						currentProcess.waitTime = currentProcess.endTime - currentProcess.arrivalTime - currentProcess.burstTime;
+						currentProcess.turnaroundTime = currentProcess.endTime - currentProcess.arrivalTime;
+						currentProcess.pBarValue = 100;
+						f.totalWaitTime += currentProcess.waitTime;
+						f.totalTurnaroundTime += currentProcess.turnaroundTime;
+						f.finishedQueue.push(currentProcess);
+						f.readyQueue.pop();
 					}
 					else
 					{
-
+						f.readyQueue.front() = currentProcess;
 					}
-
+					f.currentTime++;
+					this_thread::sleep_for(chrono::milliseconds(50));
 				}
-				f.currentTime++;
 			}
-
+			f.readyQueueString = f.printreadyqueue();
+			f.finishedQueueString = f.printfinishedqueue();
 		}
+		
+
 
 	protected:
 		/// <summary>
