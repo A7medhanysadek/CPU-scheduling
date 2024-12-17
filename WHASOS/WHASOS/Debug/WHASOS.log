@@ -1,18 +1,2 @@
-﻿  Home.cpp
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(39,16): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file 'Home.cpp')
-  
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(41,20): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file 'Home.cpp')
-  
-  MyForm3.cpp
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(39,16): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file 'MyForm3.cpp')
-  
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(41,20): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file 'MyForm3.cpp')
-  
-  Generating Code...
-  Home.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  WHASOS.vcxproj -> D:\assemply\CPU-scheduling\WHASOS\Debug\WHASOS.exe
+﻿  WHASOS.vcxproj -> D:\assemply\CPU-scheduling\WHASOS\Debug\WHASOS.exe
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(5600,5): error MSB3541: Files has invalid value "<<<<<<< HEAD". Illegal characters in path.

@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|solutionrelative:WHASOS\\MyForm3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\proces.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|solutionrelative:WHASOS\\proces.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\FCFSscheduler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|solutionrelative:WHASOS\\FCFSscheduler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\proces.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|solutionrelative:WHASOS\\proces.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CEDE5B4B-60CA-4D10-A6DC-EB9CFF988DC7}|WHASOS\\WHASOS.vcxproj|D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\Home.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -42,15 +42,15 @@
               "Title": "MyForm3.h [Design]",
               "DocumentMoniker": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\MyForm3.h",
               "RelativeDocumentMoniker": "WHASOS\\MyForm3.h",
-              "ToolTip": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\MyForm3.h [Design]*",
-              "RelativeToolTip": "WHASOS\\MyForm3.h [Design]*",
+              "ToolTip": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\MyForm3.h [Design]",
+              "RelativeToolTip": "WHASOS\\MyForm3.h [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-17T03:06:12.11Z",
+              "WhenOpened": "2024-12-17T20:06:00.354Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "proces.h",
               "DocumentMoniker": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\proces.h",
               "RelativeDocumentMoniker": "WHASOS\\proces.h",
@@ -67,22 +67,22 @@
               "Title": "MyForm3.h",
               "DocumentMoniker": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\MyForm3.h",
               "RelativeDocumentMoniker": "WHASOS\\MyForm3.h",
-              "ToolTip": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\MyForm3.h*",
-              "RelativeToolTip": "WHASOS\\MyForm3.h*",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAkwKcAAAAEAAAAAAAAAA==",
+              "ToolTip": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\MyForm3.h",
+              "RelativeToolTip": "WHASOS\\MyForm3.h",
+              "ViewState": "AgIAANsAAAAAAAAAAAAAAOIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-16T23:57:38.634Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FCFSscheduler.h",
               "DocumentMoniker": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\FCFSscheduler.h",
               "RelativeDocumentMoniker": "WHASOS\\FCFSscheduler.h",
               "ToolTip": "D:\\assemply\\CPU-scheduling\\WHASOS\\WHASOS\\FCFSscheduler.h",
               "RelativeToolTip": "WHASOS\\FCFSscheduler.h",
-              "ViewState": "AgIAAA4AAAAAAAAAAAArwBwAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAArwBwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-16T23:57:38.64Z",
               "EditorCaption": ""
@@ -97,7 +97,8 @@
               "RelativeToolTip": "WHASOS\\Home.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-16T23:57:38.643Z"
+              "WhenOpened": "2024-12-16T23:57:38.643Z",
+              "EditorCaption": ""
             }
           ]
         }
