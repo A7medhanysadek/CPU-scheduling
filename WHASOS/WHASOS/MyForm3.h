@@ -3,6 +3,8 @@
 #include "proces.h"
 #include <vector>
 #include <map>
+#include <string>
+
 namespace WHASOS {
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -62,51 +64,84 @@ namespace WHASOS {
 		}
 		void runfcfs(vector<process> v)
 		{
+			// fcfs approach
 			fcfs f(v);
-
-			int pointer = 0;
-			sort(f.processes.begin(), f.processes.end(), CompareByValue());
-			while (pointer < f.processes.size() || !f.readyQueue.empty())
+			int index = 0;
+			while (index < f.processes.size() && !f.readyQueue.empty())
 			{
-				while (pointer < f.processes.size() && f.processes[pointer].arrivalTime <= f.currentTime)
+				while (index<f.processes.size() && f.processes[index].arrivalTime == f.currentTime)
 				{
-					f.readyQueue.push(f.processes[pointer]);
-					pointer++;
+					f.readyQueue.push(f.processes[index]);
+					index++;
 				}
 				if (!f.readyQueue.empty())
 				{
-					process currentProcess = f.readyQueue.front();
-					f.currentProcessID = currentProcess.processID;
-					f.readyQueueString = f.printreadyqueue();
-					f.finishedQueueString = f.printfinishedqueue();
-					if (currentProcess.startTime == 0)
+					if (f.readyQueue.front().lastRemainingBurst)
 					{
-						currentProcess.startTime = f.currentTime;
-						f.totalResponseTime += currentProcess.startTime - currentProcess.arrivalTime;
-					}
-					currentProcess.lastRemainingBurst--;
-					currentProcess.pBarValue = 100 - (currentProcess.lastRemainingBurst * 100 / currentProcess.burstTime);
-					if (currentProcess.lastRemainingBurst == 0)
-					{
-						currentProcess.endTime = f.currentTime + 1;
-						currentProcess.waitTime = currentProcess.endTime - currentProcess.arrivalTime - currentProcess.burstTime;
-						currentProcess.turnaroundTime = currentProcess.endTime - currentProcess.arrivalTime;
-						currentProcess.pBarValue = 100;
-						f.totalWaitTime += currentProcess.waitTime;
-						f.totalTurnaroundTime += currentProcess.turnaroundTime;
-						f.finishedQueue.push(currentProcess);
-						f.readyQueue.pop();
+						f.readyQueue.front().lastRemainingBurst--;
+						f.readyQueue.front().pBarValue = (f.readyQueue.front().burstTime - f.readyQueue.front().lastRemainingBurst) * 100 / f.readyQueue.front().burstTime;
+						f.currentProcessID = f.readyQueue.front().processID;
+						if (f.currentProcessID == "P1")
+						{
+							this->progressBar1->Value = f.readyQueue.front().pBarValue;
+							this->label18->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
+						}
+						else if (f.currentProcessID == "P2")
+						{
+							this->progressBar2->Value = f.readyQueue.front().pBarValue;
+							this->label19->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
+						}
+						else if (f.currentProcessID == "P3")
+						{
+							this->progressBar3->Value = f.readyQueue.front().pBarValue;
+							this->label20->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
+						}
+						else if (f.currentProcessID == "P4")
+						{
+							this->progressBar4->Value = f.readyQueue.front().pBarValue;
+							this->label21->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
+						}
+						else if (f.currentProcessID == "P5")
+						{
+							this->progressBar5->Value = f.readyQueue.front().pBarValue;
+							this->label22->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
+						}
+						else if (f.currentProcessID == "P6")
+						{
+							this->progressBar6->Value = f.readyQueue.front().pBarValue;
+							this->label23->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
+						}
+						else if (f.currentProcessID == "P7")
+						{
+							this->progressBar7->Value = f.readyQueue.front().pBarValue;
+							this->label24->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
+						}
+						else if (f.currentProcessID == "P8")
+						{
+							this->progressBar8->Value = f.readyQueue.front().pBarValue;
+							this->label25->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
+						}
+						else if (f.currentProcessID == "P9")
+						{
+							this->progressBar9->Value = f.readyQueue.front().pBarValue;
+							this->label26->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
+						}
+						else if (f.currentProcessID == "P10")
+						{
+							this->progressBar10->Value = f.readyQueue.front().pBarValue;
+							this->label27->Text = String::Format("{0}", f.readyQueue.front().lastRemainingBurst);
+						}
+
 					}
 					else
 					{
-						f.readyQueue.front() = currentProcess;
+
 					}
-					f.currentTime++;
-					this_thread::sleep_for(chrono::milliseconds(50));
+
 				}
+				f.currentTime++;
 			}
-			f.readyQueueString = f.printreadyqueue();
-			f.finishedQueueString = f.printfinishedqueue();
+
 		}
 
 	protected:
@@ -150,7 +185,7 @@ namespace WHASOS {
 	private: System::Windows::Forms::Label^ label15;
 	private: System::Windows::Forms::Label^ label16;
 	private: System::Windows::Forms::Label^ label17;
-	private: System::Windows::Forms::Label^ label18;
+	public: System::Windows::Forms::Label^ label18;
 	private: System::Windows::Forms::Label^ label19;
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Label^ label21;
