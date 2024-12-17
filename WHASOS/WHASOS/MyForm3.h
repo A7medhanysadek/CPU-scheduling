@@ -14,6 +14,11 @@ namespace WHASOS {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace std;
+	struct CompareByValue {
+		bool operator()(const process a, const process b) const {
+			return a.arrivalTime < b.arrivalTime;
+		}
+	};
 	/// <summary>
 	/// Summary for MyForm1
 	/// </summary>
@@ -27,6 +32,50 @@ namespace WHASOS {
 			InitializeComponent();
 			this->textBox2->Text = st;
 			vv = new vector<process>(v);
+			for (int i = 0; i < v.size(); i++)
+			{
+				if (i == 0)
+				{
+					this->label18->Text = v[i].lastRemainingBurst.ToString();
+				}
+				else if (i == 1)
+				{
+					this->label19->Text = v[i].lastRemainingBurst.ToString();
+				}
+				else if (i == 2)
+				{
+					this->label20->Text = v[i].lastRemainingBurst.ToString();
+				}
+				else if (i == 3)
+				{
+					this->label21->Text = v[i].lastRemainingBurst.ToString();
+				}
+				else if (i == 4)
+				{
+					this->label22->Text = v[i].lastRemainingBurst.ToString();
+				}
+				else if (i == 5)
+				{
+					this->label23->Text = v[i].lastRemainingBurst.ToString();
+				}
+				else if (i == 6)
+				{
+					this->label24->Text = v[i].lastRemainingBurst.ToString();
+				}
+				else if (i == 7)
+				{
+					this->label25->Text = v[i].lastRemainingBurst.ToString();
+				}
+				else if (i == 8)
+				{
+					this->label26->Text = v[i].lastRemainingBurst.ToString();
+				}
+				else if (i == 9)
+				{
+					this->label27->Text = v[i].lastRemainingBurst.ToString();
+				}
+			}
+			sort(vv->begin(), vv->end(), CompareByValue());
 			f = new fcfs(*vv);
 			this->timer1->Start();
 			//
@@ -170,10 +219,20 @@ namespace WHASOS {
 			}
 			else
 			{
+				f->readyQueueString = f->printreadyqueue();
+				f->finishedQueueString = f->printfinishedqueue();
+				this->textBox1->Text = gcnew String(f->readyQueueString.c_str());
+				//current time
+				this->textBox6->Text = f->currentTime.ToString();
+				double avgWaitTime = f->totalWaitTime / f->totalProcesses;
+				double avgTurnaroundTime = f->totalTurnaroundTime / f->totalProcesses;
+				this->textBox4->Text = avgWaitTime.ToString();
+				this->textBox5->Text = avgTurnaroundTime.ToString();
+				// msg box
 				this->timer1->Stop();
+				MessageBox::Show("Simulation ended succesfully");
 			}
-			f->readyQueueString = f->printreadyqueue();
-			f->finishedQueueString = f->printfinishedqueue();
+
 		}
 
 
