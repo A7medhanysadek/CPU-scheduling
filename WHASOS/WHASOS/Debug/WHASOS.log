@@ -1,2 +1,96 @@
-﻿  WHASOS.vcxproj -> D:\assemply\CPU-scheduling\WHASOS\Debug\WHASOS.exe
+﻿  Home.cpp
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\SJFscheduler.h(40,18): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\SJFscheduler.h(42,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\RRscheduler.h(44,24): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\RRscheduler.h(46,28): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\FPJFscheduler.h(40,18): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\FPJFscheduler.h(42,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(49,22): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(120,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(122,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(272,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(274,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(420,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(422,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(568,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(570,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+  MyForm3.cpp
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\SJFscheduler.h(40,18): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\SJFscheduler.h(42,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\RRscheduler.h(44,24): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\RRscheduler.h(46,28): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\FPJFscheduler.h(40,18): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\FPJFscheduler.h(42,19): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(49,22): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(120,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(122,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(272,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(274,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(420,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(422,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(568,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(570,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+  Generating Code...
+  Home.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  WHASOS.vcxproj -> D:\assemply\CPU-scheduling\WHASOS\Debug\WHASOS.exe
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(5600,5): error MSB3541: Files has invalid value "<<<<<<< HEAD". Illegal characters in path.
