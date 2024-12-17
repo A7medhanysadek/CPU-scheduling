@@ -21,10 +21,11 @@ struct process
 		arrivalTime = 0;
 		burstTime = 0;
 		priority = 0;
-		startTime = 0;
+		startTime = -1;
 		endTime = 0;
 		waitTime = 0;
 		lastRemainingBurst = burstTime;
+		turnaroundTime = 0;
     };
 	process(string processID, int arrivalTime, int burstTime)
 	{
@@ -32,10 +33,11 @@ struct process
 		this->arrivalTime = arrivalTime;
 		this->burstTime = burstTime;
 		priority = 0;
-		startTime = 0;
+		startTime = -1;
 		endTime = 0;
 		waitTime = 0;
 		lastRemainingBurst = burstTime;
+		turnaroundTime = 0;
 	};
 	process(string processID, int arrivalTime, int burstTime, int priority)
 	{
@@ -43,7 +45,7 @@ struct process
 		this->arrivalTime = arrivalTime;
 		this->burstTime = burstTime;
 		this->priority = priority;
-		startTime = 0;
+		startTime = -1;
 		endTime = 0;
 		waitTime = 0;
 		lastRemainingBurst = burstTime;
