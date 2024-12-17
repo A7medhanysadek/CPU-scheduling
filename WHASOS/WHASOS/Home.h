@@ -3,9 +3,10 @@
 #include "FCFSscheduler.h"
 #include <vector>
 #include "proces.h"
-//extern "C" int AddNumbers(int a, int b);
+extern "C" int AddNumbers(int a, int b);
 extern "C" int gcd(long long a, long long b);
 extern "C" int fast_power(int a, int b);
+extern "C" int lcm(int a, int b);
 namespace WHASOS {
 
 	using namespace System;
@@ -25,6 +26,7 @@ namespace WHASOS {
 		vector<process>* v;
 		Home(void)
 		{
+			v = new vector<process>();
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
@@ -382,7 +384,10 @@ private: System::Windows::Forms::Label^ label12;
 			// comboBoxp1
 			// 
 			this->comboBoxp1->FormattingEnabled = true;
-			this->comboBoxp1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
+			this->comboBoxp1->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+				L"Adding two numbers", L"Fast power", L"gcd",
+					L"lcm"
+			});
 			this->comboBoxp1->Location = System::Drawing::Point(1222, 142);
 			this->comboBoxp1->Name = L"comboBoxp1";
 			this->comboBoxp1->Size = System::Drawing::Size(121, 24);
@@ -392,7 +397,10 @@ private: System::Windows::Forms::Label^ label12;
 			// comboBoxP2
 			// 
 			this->comboBoxP2->FormattingEnabled = true;
-			this->comboBoxP2->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
+			this->comboBoxP2->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+				L"Adding two numbers", L"Fast power", L"gcd",
+					L"lcm"
+			});
 			this->comboBoxP2->Location = System::Drawing::Point(1222, 192);
 			this->comboBoxP2->Name = L"comboBoxP2";
 			this->comboBoxP2->Size = System::Drawing::Size(121, 24);
@@ -402,7 +410,10 @@ private: System::Windows::Forms::Label^ label12;
 			// comboBoxp3
 			// 
 			this->comboBoxp3->FormattingEnabled = true;
-			this->comboBoxp3->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
+			this->comboBoxp3->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+				L"Adding two numbers", L"Fast power", L"gcd",
+					L"lcm"
+			});
 			this->comboBoxp3->Location = System::Drawing::Point(1222, 243);
 			this->comboBoxp3->Name = L"comboBoxp3";
 			this->comboBoxp3->Size = System::Drawing::Size(121, 24);
@@ -412,7 +423,10 @@ private: System::Windows::Forms::Label^ label12;
 			// comboBoxp4
 			// 
 			this->comboBoxp4->FormattingEnabled = true;
-			this->comboBoxp4->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
+			this->comboBoxp4->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+				L"Adding two numbers", L"Fast power", L"gcd",
+					L"lcm"
+			});
 			this->comboBoxp4->Location = System::Drawing::Point(1222, 291);
 			this->comboBoxp4->Name = L"comboBoxp4";
 			this->comboBoxp4->Size = System::Drawing::Size(121, 24);
@@ -422,7 +436,10 @@ private: System::Windows::Forms::Label^ label12;
 			// comboBoxp5
 			// 
 			this->comboBoxp5->FormattingEnabled = true;
-			this->comboBoxp5->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
+			this->comboBoxp5->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+				L"Adding two numbers", L"Fast power", L"gcd",
+					L"lcm"
+			});
 			this->comboBoxp5->Location = System::Drawing::Point(1222, 334);
 			this->comboBoxp5->Name = L"comboBoxp5";
 			this->comboBoxp5->Size = System::Drawing::Size(121, 24);
@@ -432,7 +449,10 @@ private: System::Windows::Forms::Label^ label12;
 			// comboBoxp6
 			// 
 			this->comboBoxp6->FormattingEnabled = true;
-			this->comboBoxp6->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
+			this->comboBoxp6->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+				L"Adding two numbers", L"Fast power", L"gcd",
+					L"lcm"
+			});
 			this->comboBoxp6->Location = System::Drawing::Point(1222, 378);
 			this->comboBoxp6->Name = L"comboBoxp6";
 			this->comboBoxp6->Size = System::Drawing::Size(121, 24);
@@ -442,7 +462,10 @@ private: System::Windows::Forms::Label^ label12;
 			// comboBoxp7
 			// 
 			this->comboBoxp7->FormattingEnabled = true;
-			this->comboBoxp7->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
+			this->comboBoxp7->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+				L"Adding two numbers", L"Fast power", L"gcd",
+					L"lcm"
+			});
 			this->comboBoxp7->Location = System::Drawing::Point(1222, 420);
 			this->comboBoxp7->Name = L"comboBoxp7";
 			this->comboBoxp7->Size = System::Drawing::Size(121, 24);
@@ -452,7 +475,10 @@ private: System::Windows::Forms::Label^ label12;
 			// comboBoxp8
 			// 
 			this->comboBoxp8->FormattingEnabled = true;
-			this->comboBoxp8->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
+			this->comboBoxp8->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+				L"Adding two numbers", L"Fast power", L"gcd",
+					L"lcm"
+			});
 			this->comboBoxp8->Location = System::Drawing::Point(1222, 462);
 			this->comboBoxp8->Name = L"comboBoxp8";
 			this->comboBoxp8->Size = System::Drawing::Size(121, 24);
@@ -462,7 +488,10 @@ private: System::Windows::Forms::Label^ label12;
 			// comboBoxp9
 			// 
 			this->comboBoxp9->FormattingEnabled = true;
-			this->comboBoxp9->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
+			this->comboBoxp9->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+				L"Adding two numbers", L"Fast power", L"gcd",
+					L"lcm"
+			});
 			this->comboBoxp9->Location = System::Drawing::Point(1222, 505);
 			this->comboBoxp9->Name = L"comboBoxp9";
 			this->comboBoxp9->Size = System::Drawing::Size(121, 24);
@@ -472,7 +501,10 @@ private: System::Windows::Forms::Label^ label12;
 			// comboBoxp10
 			// 
 			this->comboBoxp10->FormattingEnabled = true;
-			this->comboBoxp10->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Adding two numbers", L"convert to base", L"gcd" });
+			this->comboBoxp10->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+				L"Adding two numbers", L"Fast power", L"gcd",
+					L"lcm"
+			});
 			this->comboBoxp10->Location = System::Drawing::Point(1222, 548);
 			this->comboBoxp10->Name = L"comboBoxp10";
 			this->comboBoxp10->Size = System::Drawing::Size(121, 24);
@@ -1503,6 +1535,14 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	{
 		label3->Text = gcd(Int32::Parse(this->textBoxI1p1->Text), Int32::Parse(this->textBoxI2p1->Text)).ToString();
 	}
+	else if (this->comboBoxp1->Text=="lcm")
+	{
+		label3->Text = lcm(Int32::Parse(this->textBoxI1p1->Text), Int32::Parse(this->textBoxI2p1->Text)).ToString();
+	}
+	else if (this->comboBoxp1->Text=="Fast power")
+	{
+		label3->Text = fast_power(Int32::Parse(this->textBoxI1p1->Text), Int32::Parse(this->textBoxI2p1->Text)).ToString();
+	}
 	process p;
 	p.arrivalTime = Int32::Parse(this->textBoxAp1->Text);
 	p.burstTime = Int32::Parse(this->textBoxBp1->Text);
@@ -1521,6 +1561,22 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	this->buttonp1->Visible = false;
 }
 private: System::Void buttonp2_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (this->comboBoxP2->Text == "Adding two numbers")
+	{
+		label4->Text = AddNumbers(Int32::Parse(this->textBoxI1p2->Text), Int32::Parse(this->textBoxI2p2->Text)).ToString();
+	}
+	else if (this->comboBoxP2->Text == "gcd")
+	{
+		label4->Text = gcd(Int32::Parse(this->textBoxI1p2->Text), Int32::Parse(this->textBoxI2p2->Text)).ToString();
+	}
+	else if (this->comboBoxP2->Text == "lcm")
+	{
+		label4->Text = lcm(Int32::Parse(this->textBoxI1p2->Text), Int32::Parse(this->textBoxI2p2->Text)).ToString();
+	}
+	else if (this->comboBoxP2->Text == "Fast power")
+	{
+		label4->Text = fast_power(Int32::Parse(this->textBoxI1p2->Text), Int32::Parse(this->textBoxI2p2->Text)).ToString();
+	}
 	process p;
 	p.arrivalTime = Int32::Parse(this->textBoxAp2->Text);
 	p.burstTime = Int32::Parse(this->textBoxBp2->Text);
@@ -1539,6 +1595,22 @@ private: System::Void buttonp2_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp2->Visible = false;
 }
 private: System::Void buttonp3_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (this->comboBoxp3->Text == "Adding two numbers")
+	{
+		label5->Text = AddNumbers(Int32::Parse(this->textBoxI1p3->Text), Int32::Parse(this->textBoxI2p3->Text)).ToString();
+	}
+	else if (this->comboBoxp3->Text == "gcd")
+	{
+		label5->Text = gcd(Int32::Parse(this->textBoxI1p3->Text), Int32::Parse(this->textBoxI2p3->Text)).ToString();
+	}
+	else if (this->comboBoxp3->Text == "lcm")
+	{
+		label5->Text = lcm(Int32::Parse(this->textBoxI1p3->Text), Int32::Parse(this->textBoxI2p3->Text)).ToString();
+	}
+	else if (this->comboBoxp3->Text == "Fast power")
+	{
+		label5->Text = fast_power(Int32::Parse(this->textBoxI1p3->Text), Int32::Parse(this->textBoxI2p3->Text)).ToString();
+	}
 	process p;
 	p.arrivalTime = Int32::Parse(this->textBoxAp3->Text);
 	p.burstTime = Int32::Parse(this->textBoxBp3->Text);
@@ -1557,6 +1629,22 @@ private: System::Void buttonp3_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp3->Visible = false;
 }
 private: System::Void buttonp4_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (this->comboBoxp4->Text == "Adding two numbers")
+	{
+		label6->Text = AddNumbers(Int32::Parse(this->textBoxI1p4->Text), Int32::Parse(this->textBoxI2p4->Text)).ToString();
+	}
+	else if (this->comboBoxp4->Text == "gcd")
+	{
+		label6->Text = gcd(Int32::Parse(this->textBoxI1p4->Text), Int32::Parse(this->textBoxI2p4->Text)).ToString();
+	}
+	else if (this->comboBoxp4->Text == "lcm")
+	{
+		label6->Text = lcm(Int32::Parse(this->textBoxI1p4->Text), Int32::Parse(this->textBoxI2p4->Text)).ToString();
+	}
+	else if (this->comboBoxp4->Text == "Fast power")
+	{
+		label6->Text = fast_power(Int32::Parse(this->textBoxI1p4->Text), Int32::Parse(this->textBoxI2p4->Text)).ToString();
+	}
 	process p;
 	p.arrivalTime = Int32::Parse(this->textBoxAp4->Text);
 	p.burstTime = Int32::Parse(this->textBoxBp4->Text);

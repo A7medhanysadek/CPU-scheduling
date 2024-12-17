@@ -20,6 +20,9 @@ Class WHASOS.MyForm1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(System.String, std.vector<process\,std::allocator<process> >*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.Windows.Forms.TextBox textBox1 : Public
+    System.Windows.Forms.Label label41 : Public
+    System.Windows.Forms.Label label42 : Public
+    System.Windows.Forms.ProgressBar progressBar11 : Public
   Methods:
     runfcfs(vector<process\,std::allocator<process> >*): PrivateScope, Public, HideBySig
 Class WHASOS.Home: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

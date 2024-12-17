@@ -18,3 +18,16 @@ extern "C" int gcd(long long a, long long b) {
     }
     return result;
 }
+extern "C" int lcm(long long a, long long b) {
+    long long gcd_result = gcd(a, b);
+    int result;
+    __asm {
+        mov eax, DWORD PTR a
+        mov ebx, DWORD PTR b
+        mov ecx, DWORD PTR gcd_result
+        imul eax, ebx
+        div ecx
+        mov result, eax
+    }
+    return result;
+}
