@@ -19,6 +19,7 @@ Class WHASOS.MyForm1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.String, std.vector<process\,std::allocator<process> >*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
+    fcfs* f : Public
     System.Windows.Forms.TextBox textBox1 : Public
     System.Windows.Forms.Label label18 : Public
     System.Windows.Forms.Label label41 : Public

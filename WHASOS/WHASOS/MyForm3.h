@@ -21,11 +21,13 @@ namespace WHASOS {
 	{
 	public:
 		static vector<process> *vv;
+		fcfs* f;
 		MyForm1(String^ st,vector<process> v)
 		{
 			InitializeComponent();
 			this->textBox2->Text = st;
 			vv = new vector<process>(v);
+			f = new fcfs(*vv);
 			this->timer1->Start();
 			//
 			//TODO: Add the constructor code here
@@ -34,24 +36,23 @@ namespace WHASOS {
 		static int pointer = 0;
 		void run()
 		{
-			fcfs f(*vv);
-			if (pointer < f.processes.size() || !f.readyQueue.empty())
+			if (pointer < f->processes.size() || !f->readyQueue.empty())
 			{
-				while (pointer < f.processes.size() && f.processes[pointer].arrivalTime <= f.currentTime)
+				while (pointer < f->processes.size() && f->processes[pointer].arrivalTime <= f->currentTime)
 				{
-					f.readyQueue.push(f.processes[pointer]);
+					f->readyQueue.push(f->processes[pointer]);
 					pointer++;
 				}
-				if (!f.readyQueue.empty())
+				if (!f->readyQueue.empty())
 				{
-					process currentProcess = f.readyQueue.front();
-					f.currentProcessID = currentProcess.processID;
-					f.readyQueueString = f.printreadyqueue();
-					f.finishedQueueString = f.printfinishedqueue();
+					process currentProcess = f->readyQueue.front();
+					f->currentProcessID = currentProcess.processID;
+					f->readyQueueString = f->printreadyqueue();
+					f->finishedQueueString = f->printfinishedqueue();
 					if (currentProcess.startTime == 0)
 					{
-						currentProcess.startTime = f.currentTime;
-						f.totalResponseTime += currentProcess.startTime - currentProcess.arrivalTime;
+						currentProcess.startTime = f->currentTime;
+						f->totalResponseTime += currentProcess.startTime - currentProcess.arrivalTime;
 					}
 					currentProcess.lastRemainingBurst--;
 					currentProcess.pBarValue = 100 - (currentProcess.lastRemainingBurst * 100 / currentProcess.burstTime);
@@ -108,21 +109,20 @@ namespace WHASOS {
 					}
 					if (currentProcess.lastRemainingBurst == 0)
 					{
-						currentProcess.endTime = f.currentTime + 1;
+						currentProcess.endTime = f->currentTime + 1;
 						currentProcess.waitTime = currentProcess.endTime - currentProcess.arrivalTime - currentProcess.burstTime;
 						currentProcess.turnaroundTime = currentProcess.endTime - currentProcess.arrivalTime;
 						currentProcess.pBarValue = 100;
-						f.totalWaitTime += currentProcess.waitTime;
-						f.totalTurnaroundTime += currentProcess.turnaroundTime;
-						f.finishedQueue.push(currentProcess);
-						f.readyQueue.pop();
+						f->totalWaitTime += currentProcess.waitTime;
+						f->totalTurnaroundTime += currentProcess.turnaroundTime;
+						f->finishedQueue.push(currentProcess);
+						f->readyQueue.pop();
 					}
 					else
 					{
-						f.readyQueue.front() = currentProcess;
+						f->readyQueue.front() = currentProcess;
 					}
-					f.currentTime++;
-					this_thread::sleep_for(chrono::milliseconds(50));
+					f->currentTime++;
 				}
 
 			}
@@ -130,8 +130,8 @@ namespace WHASOS {
 			{
 				this->timer1->Stop();
 			}
-			f.readyQueueString = f.printreadyqueue();
-			f.finishedQueueString = f.printfinishedqueue();
+			f->readyQueueString = f->printreadyqueue();
+			f->finishedQueueString = f->printfinishedqueue();
 		}
 
 

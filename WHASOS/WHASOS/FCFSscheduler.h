@@ -20,6 +20,14 @@ struct fcfs
 	string readyQueueString;
 	string finishedQueueString;
 	string currentProcessID;
+	fcfs()
+	{
+		currentTime = 0;
+		totalWaitTime = 0;
+		totalTurnaroundTime = 0;
+		totalResponseTime = 0;
+		totalProcesses = 0;
+	}
 	fcfs(vector<process> processes)
 	{
 		this->processes = processes;
