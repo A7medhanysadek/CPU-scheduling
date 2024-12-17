@@ -21,11 +21,10 @@ namespace WHASOS {
 	public ref class MyForm1 : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm1(String^ st)
+		MyForm1(String^ st,vector<process> v)
 		{
 			InitializeComponent();
 			this->textBox2->Text = st;
-			vector<process> v;
 			runfcfs(v);
 			//
 			//TODO: Add the constructor code here
@@ -36,7 +35,6 @@ namespace WHASOS {
 			fcfs f(v);
 			int pointer = 0;
 			sort(f.processes.begin(), f.processes.end(), CompareByValue());
-				this->progressBar1->Increment(50);
 			while (pointer < f.processes.size() || !f.readyQueue.empty())
 			{
 				while (pointer < f.processes.size() && f.processes[pointer].arrivalTime <= f.currentTime)

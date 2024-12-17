@@ -1,10 +1,6 @@
 ﻿  Home.cpp
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(40,19): warning C4018: '<': signed/unsigned mismatch
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(42,20): warning C4018: '<': signed/unsigned mismatch
-  MyForm3.cpp
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(40,19): warning C4018: '<': signed/unsigned mismatch
-C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(42,20): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(38,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(40,20): warning C4018: '<': signed/unsigned mismatch
   Home.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   WHASOS.vcxproj -> C:\Users\a7med\OneDrive\سطح المكتب\resources\مشاريع (حاسبات)\سنة تالته\CPU-scheduling\WHASOS\Debug\WHASOS.exe
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(5445,5): error MSB3541: Files has invalid value "<<<<<<< HEAD". Illegal characters in path.

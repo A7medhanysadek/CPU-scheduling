@@ -3,8 +3,9 @@
 #include "FCFSscheduler.h"
 #include <vector>
 #include "proces.h"
-extern "C" int AddNumbers(int a, int b);
+//extern "C" int AddNumbers(int a, int b);
 extern "C" int gcd(long long a, long long b);
+extern "C" int fast_power(int a, int b);
 namespace WHASOS {
 
 	using namespace System;
@@ -21,7 +22,7 @@ namespace WHASOS {
 	{
 	public:
 		static System :: String^ approach;
-		
+		vector<process>* v;
 		Home(void)
 		{
 			InitializeComponent();
@@ -1469,6 +1470,13 @@ private: System::Windows::Forms::Label^ label12;
 	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
 }
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		process p;
+		p.arrivalTime = Int32::Parse(this->textBoxAp10->Text);
+		p.burstTime = Int32::Parse(this->textBoxBp10->Text);
+		p.priority = Int32::Parse(this->textBoxp10->Text);
+		p.lastRemainingBurst = p.burstTime;
+		p.processID = "P10";
+		v->push_back(p);
 		this->label3->Visible = lblp1->Visible;
 		this->label4->Visible = lblp2->Visible;
 		this->label5->Visible = lblp3->Visible;
@@ -1479,9 +1487,8 @@ private: System::Windows::Forms::Label^ label12;
 		this->label10->Visible = lblp8->Visible;
 		this->label11->Visible = lblp9->Visible;
 		this->label12->Visible = lblp10->Visible;
-		MyForm1 ^ form1 = gcnew MyForm1(this->comboBox11->Text);
+		MyForm1 ^ form1 = gcnew MyForm1(this->comboBox11->Text,*v);
 		form1->Show();
-
 	}
 	private: System::Void Home_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
@@ -1496,7 +1503,13 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	{
 		label3->Text = gcd(Int32::Parse(this->textBoxI1p1->Text), Int32::Parse(this->textBoxI2p1->Text)).ToString();
 	}
-	
+	process p;
+	p.arrivalTime = Int32::Parse(this->textBoxAp1->Text);
+	p.burstTime = Int32::Parse(this->textBoxBp1->Text);
+	p.priority = Int32::Parse(this->textBoxp1->Text);
+	p.lastRemainingBurst = p.burstTime;
+	p.processID = "P1";
+	v->push_back(p);
 	this->textBoxp2->Visible = true;
 	this->textBoxAp2->Visible = true;
 	this->textBoxBp2->Visible = true;
@@ -1508,6 +1521,13 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	this->buttonp1->Visible = false;
 }
 private: System::Void buttonp2_Click(System::Object^ sender, System::EventArgs^ e) {
+	process p;
+	p.arrivalTime = Int32::Parse(this->textBoxAp2->Text);
+	p.burstTime = Int32::Parse(this->textBoxBp2->Text);
+	p.priority = Int32::Parse(this->textBoxp2->Text);
+	p.lastRemainingBurst = p.burstTime;
+	p.processID = "P2";
+	v->push_back(p);
 	this->textBoxp3->Visible = true;
 	this->textBoxAp3->Visible = true;
 	this->textBoxBp3->Visible = true;
@@ -1519,6 +1539,13 @@ private: System::Void buttonp2_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp2->Visible = false;
 }
 private: System::Void buttonp3_Click(System::Object^ sender, System::EventArgs^ e) {
+	process p;
+	p.arrivalTime = Int32::Parse(this->textBoxAp3->Text);
+	p.burstTime = Int32::Parse(this->textBoxBp3->Text);
+	p.priority = Int32::Parse(this->textBoxp3->Text);
+	p.lastRemainingBurst = p.burstTime;
+	p.processID = "P3";
+	v->push_back(p);
 	this->textBoxp4->Visible = true;
 	this->textBoxAp4->Visible = true;
 	this->textBoxBp4->Visible = true;
@@ -1530,6 +1557,13 @@ private: System::Void buttonp3_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp3->Visible = false;
 }
 private: System::Void buttonp4_Click(System::Object^ sender, System::EventArgs^ e) {
+	process p;
+	p.arrivalTime = Int32::Parse(this->textBoxAp4->Text);
+	p.burstTime = Int32::Parse(this->textBoxBp4->Text);
+	p.priority = Int32::Parse(this->textBoxp4->Text);
+	p.lastRemainingBurst = p.burstTime;
+	p.processID = "P4";
+	v->push_back(p);
 	this->textBoxp5->Visible = true;
 	this->textBoxAp5->Visible = true;
 	this->textBoxBp5->Visible = true;
@@ -1541,6 +1575,13 @@ private: System::Void buttonp4_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp4->Visible = false;
 }
 private: System::Void buttonp5_Click(System::Object^ sender, System::EventArgs^ e) {
+	process p;
+	p.arrivalTime = Int32::Parse(this->textBoxAp5->Text);
+	p.burstTime = Int32::Parse(this->textBoxBp5->Text);
+	p.priority = Int32::Parse(this->textBoxp5->Text);
+	p.lastRemainingBurst = p.burstTime;
+	p.processID = "P5";
+	v->push_back(p);
 	this->textBoxp6->Visible = true;
 	this->textBoxAp6->Visible = true;
 	this->textBoxBp6->Visible = true;
@@ -1552,6 +1593,13 @@ private: System::Void buttonp5_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp5->Visible = false;
 }
 private: System::Void buttonp6_Click(System::Object^ sender, System::EventArgs^ e) {
+	process p;
+	p.arrivalTime = Int32::Parse(this->textBoxAp6->Text);
+	p.burstTime = Int32::Parse(this->textBoxBp6->Text);
+	p.priority = Int32::Parse(this->textBoxp6->Text);
+	p.lastRemainingBurst = p.burstTime;
+	p.processID = "P6";
+	v->push_back(p);
 	this->textBoxp7->Visible = true;
 	this->textBoxAp7->Visible = true;
 	this->textBoxBp7->Visible = true;
@@ -1563,6 +1611,13 @@ private: System::Void buttonp6_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp6->Visible = false;
 }
 private: System::Void buttonp7_Click(System::Object^ sender, System::EventArgs^ e) {
+	process p;
+	p.arrivalTime = Int32::Parse(this->textBoxAp7->Text);
+	p.burstTime = Int32::Parse(this->textBoxBp7->Text);
+	p.priority = Int32::Parse(this->textBoxp7->Text);
+	p.lastRemainingBurst = p.burstTime;
+	p.processID = "P7";
+	v->push_back(p);
 	this->textBoxp8->Visible = true;
 	this->textBoxAp8->Visible = true;
 	this->textBoxBp8->Visible = true;
@@ -1574,6 +1629,13 @@ private: System::Void buttonp7_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp7->Visible = false;
 }
 private: System::Void buttonp8_Click(System::Object^ sender, System::EventArgs^ e) {
+	process p;
+	p.arrivalTime = Int32::Parse(this->textBoxAp8->Text);
+	p.burstTime = Int32::Parse(this->textBoxBp8->Text);
+	p.priority = Int32::Parse(this->textBoxp8->Text);
+	p.lastRemainingBurst = p.burstTime;
+	p.processID = "P8";
+	v->push_back(p);
 	this->textBoxp9->Visible = true;
 	this->textBoxAp9->Visible = true;
 	this->textBoxBp9->Visible = true;
@@ -1585,6 +1647,13 @@ private: System::Void buttonp8_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp8->Visible = false;
 }
 private: System::Void buttonp9_Click(System::Object^ sender, System::EventArgs^ e) {
+	process p;
+	p.arrivalTime = Int32::Parse(this->textBoxAp9->Text);
+	p.burstTime = Int32::Parse(this->textBoxBp9->Text);
+	p.priority = Int32::Parse(this->textBoxp9->Text);
+	p.lastRemainingBurst = p.burstTime;
+	p.processID = "P9";
+	v->push_back(p);
 	this->textBoxp10->Visible = true;
 	this->textBoxAp10->Visible = true;
 	this->textBoxBp10->Visible = true;
