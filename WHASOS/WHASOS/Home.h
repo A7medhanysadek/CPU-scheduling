@@ -1502,13 +1502,29 @@ private: System::Windows::Forms::Label^ label12;
 	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
 }
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		process p;
+		if (this->comboBoxp10->Text == "Adding two numbers")
+		{
+			label12->Text = AddNumbers(Int32::Parse(this->textBoxI1p10->Text), Int32::Parse(this->textBoxI2p10->Text)).ToString();
+		}
+		else if (this->comboBoxp10->Text == "gcd")
+		{
+			label12->Text = gcd(Int32::Parse(this->textBoxI1p10->Text), Int32::Parse(this->textBoxI2p10->Text)).ToString();
+		}
+		else if (this->comboBoxp10->Text == "lcm")
+		{
+			label12->Text = lcm(Int32::Parse(this->textBoxI1p10->Text), Int32::Parse(this->textBoxI2p10->Text)).ToString();
+		}
+		else if (this->comboBoxp10->Text == "Fast power")
+		{
+			label12->Text = fast_power(Int32::Parse(this->textBoxI1p10->Text), Int32::Parse(this->textBoxI2p10->Text)).ToString();
+		}
+		/*process p;
 		p.arrivalTime = Int32::Parse(this->textBoxAp10->Text);
 		p.burstTime = Int32::Parse(this->textBoxBp10->Text);
 		p.priority = Int32::Parse(this->textBoxp10->Text);
 		p.lastRemainingBurst = p.burstTime;
 		p.processID = "P10";
-		v->push_back(p);
+		v->push_back(p);*/
 		this->label3->Visible = lblp1->Visible;
 		this->label4->Visible = lblp2->Visible;
 		this->label5->Visible = lblp3->Visible;
@@ -1645,6 +1661,7 @@ private: System::Void buttonp4_Click(System::Object^ sender, System::EventArgs^ 
 	{
 		label6->Text = fast_power(Int32::Parse(this->textBoxI1p4->Text), Int32::Parse(this->textBoxI2p4->Text)).ToString();
 	}
+
 	process p;
 	p.arrivalTime = Int32::Parse(this->textBoxAp4->Text);
 	p.burstTime = Int32::Parse(this->textBoxBp4->Text);
@@ -1663,6 +1680,22 @@ private: System::Void buttonp4_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp4->Visible = false;
 }
 private: System::Void buttonp5_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (this->comboBoxp5->Text == "Adding two numbers")
+	{
+		label7->Text = AddNumbers(Int32::Parse(this->textBoxI1p5->Text), Int32::Parse(this->textBoxI2p5->Text)).ToString();
+	}
+	else if (this->comboBoxp5->Text == "gcd")
+	{
+		label7->Text = gcd(Int32::Parse(this->textBoxI1p5->Text), Int32::Parse(this->textBoxI2p5->Text)).ToString();
+	}
+	else if (this->comboBoxp5->Text == "lcm")
+	{
+		label7->Text = lcm(Int32::Parse(this->textBoxI1p5->Text), Int32::Parse(this->textBoxI2p5->Text)).ToString();
+	}
+	else if (this->comboBoxp5->Text == "Fast power")
+	{
+		label7->Text = fast_power(Int32::Parse(this->textBoxI1p5->Text), Int32::Parse(this->textBoxI2p5->Text)).ToString();
+	}
 	process p;
 	p.arrivalTime = Int32::Parse(this->textBoxAp5->Text);
 	p.burstTime = Int32::Parse(this->textBoxBp5->Text);
@@ -1681,6 +1714,22 @@ private: System::Void buttonp5_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp5->Visible = false;
 }
 private: System::Void buttonp6_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (this->comboBoxp6->Text == "Adding two numbers")
+	{
+		label8->Text = AddNumbers(Int32::Parse(this->textBoxI1p6->Text), Int32::Parse(this->textBoxI2p6->Text)).ToString();
+	}
+	else if (this->comboBoxp6->Text == "gcd")
+	{
+		label8->Text = gcd(Int32::Parse(this->textBoxI1p6->Text), Int32::Parse(this->textBoxI2p6->Text)).ToString();
+	}
+	else if (this->comboBoxp6->Text == "lcm")
+	{
+		label8->Text = lcm(Int32::Parse(this->textBoxI1p6->Text), Int32::Parse(this->textBoxI2p6->Text)).ToString();
+	}
+	else if (this->comboBoxp6->Text == "Fast power")
+	{
+		label8->Text = fast_power(Int32::Parse(this->textBoxI1p6->Text), Int32::Parse(this->textBoxI2p6->Text)).ToString();
+	}
 	process p;
 	p.arrivalTime = Int32::Parse(this->textBoxAp6->Text);
 	p.burstTime = Int32::Parse(this->textBoxBp6->Text);
@@ -1699,6 +1748,22 @@ private: System::Void buttonp6_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp6->Visible = false;
 }
 private: System::Void buttonp7_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (this->comboBoxp7->Text == "Adding two numbers")
+	{
+		label9->Text = AddNumbers(Int32::Parse(this->textBoxI1p7->Text), Int32::Parse(this->textBoxI2p7->Text)).ToString();
+	}
+	else if (this->comboBoxp7->Text == "gcd")
+	{
+		label9->Text = gcd(Int32::Parse(this->textBoxI1p7->Text), Int32::Parse(this->textBoxI2p7->Text)).ToString();
+	}
+	else if (this->comboBoxp7->Text == "lcm")
+	{
+		label9->Text = lcm(Int32::Parse(this->textBoxI1p7->Text), Int32::Parse(this->textBoxI2p7->Text)).ToString();
+	}
+	else if (this->comboBoxp7->Text == "Fast power")
+	{
+		label9->Text = fast_power(Int32::Parse(this->textBoxI1p7->Text), Int32::Parse(this->textBoxI2p7->Text)).ToString();
+	}
 	process p;
 	p.arrivalTime = Int32::Parse(this->textBoxAp7->Text);
 	p.burstTime = Int32::Parse(this->textBoxBp7->Text);
@@ -1717,6 +1782,22 @@ private: System::Void buttonp7_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp7->Visible = false;
 }
 private: System::Void buttonp8_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (this->comboBoxp8->Text == "Adding two numbers")
+	{
+		label10->Text = AddNumbers(Int32::Parse(this->textBoxI1p8->Text), Int32::Parse(this->textBoxI2p8->Text)).ToString();
+	}
+	else if (this->comboBoxp8->Text == "gcd")
+	{
+		label10->Text = gcd(Int32::Parse(this->textBoxI1p8->Text), Int32::Parse(this->textBoxI2p8->Text)).ToString();
+	}
+	else if (this->comboBoxp8->Text == "lcm")
+	{
+		label10->Text = lcm(Int32::Parse(this->textBoxI1p8->Text), Int32::Parse(this->textBoxI2p8->Text)).ToString();
+	}
+	else if (this->comboBoxp8->Text == "Fast power")
+	{
+		label10->Text = fast_power(Int32::Parse(this->textBoxI1p8->Text), Int32::Parse(this->textBoxI2p8->Text)).ToString();
+	}
 	process p;
 	p.arrivalTime = Int32::Parse(this->textBoxAp8->Text);
 	p.burstTime = Int32::Parse(this->textBoxBp8->Text);
@@ -1735,6 +1816,22 @@ private: System::Void buttonp8_Click(System::Object^ sender, System::EventArgs^ 
 	this->buttonp8->Visible = false;
 }
 private: System::Void buttonp9_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (this->comboBoxp9->Text == "Adding two numbers")
+	{
+		label11->Text = AddNumbers(Int32::Parse(this->textBoxI1p9->Text), Int32::Parse(this->textBoxI2p9->Text)).ToString();
+	}
+	else if (this->comboBoxp9->Text == "gcd")
+	{
+		label11->Text = gcd(Int32::Parse(this->textBoxI1p9->Text), Int32::Parse(this->textBoxI2p9->Text)).ToString();
+	}
+	else if (this->comboBoxp9->Text == "lcm")
+	{
+		label11->Text = lcm(Int32::Parse(this->textBoxI1p9->Text), Int32::Parse(this->textBoxI2p9->Text)).ToString();
+	}
+	else if (this->comboBoxp9->Text == "Fast power")
+	{
+		label11->Text = fast_power(Int32::Parse(this->textBoxI1p9->Text), Int32::Parse(this->textBoxI2p9->Text)).ToString();
+	}
 	process p;
 	p.arrivalTime = Int32::Parse(this->textBoxAp9->Text);
 	p.burstTime = Int32::Parse(this->textBoxBp9->Text);
