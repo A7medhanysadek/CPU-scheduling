@@ -22,6 +22,7 @@ struct rr
     string finishedQueueString;
     string currentProcessID;
     int timequantum;
+    int currentQuantum = 0;
 
     rr(vector<process> processes, int quantum)
     {
@@ -37,7 +38,6 @@ struct rr
     void run()
     {
         int pointer = 0;
-        int currentQuantum = 0;
 		sort(processes.begin(), processes.end(), [](process a, process b) {
 			return a.arrivalTime < b.arrivalTime;
 			});

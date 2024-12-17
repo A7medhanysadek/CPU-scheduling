@@ -5,19 +5,43 @@ D:\assemply\CPU-scheduling\WHASOS\WHASOS\SJFscheduler.h(40,18): warning C4018: '
 D:\assemply\CPU-scheduling\WHASOS\WHASOS\SJFscheduler.h(42,19): warning C4018: '<': signed/unsigned mismatch
   (compiling source file 'Home.cpp')
   
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(40,22): warning C4018: '<': signed/unsigned mismatch
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\RRscheduler.h(44,24): warning C4018: '<': signed/unsigned mismatch
   (compiling source file 'Home.cpp')
   
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(101,16): warning C4018: '<': signed/unsigned mismatch
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\RRscheduler.h(46,28): warning C4018: '<': signed/unsigned mismatch
   (compiling source file 'Home.cpp')
   
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(103,20): warning C4018: '<': signed/unsigned mismatch
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\FPJFscheduler.h(40,18): warning C4018: '<': signed/unsigned mismatch
   (compiling source file 'Home.cpp')
   
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(252,16): warning C4018: '<': signed/unsigned mismatch
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\FPJFscheduler.h(42,19): warning C4018: '<': signed/unsigned mismatch
   (compiling source file 'Home.cpp')
   
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(254,20): warning C4018: '<': signed/unsigned mismatch
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(49,22): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(120,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(122,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(272,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(274,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(420,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(422,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(568,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Home.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(570,20): warning C4018: '<': signed/unsigned mismatch
   (compiling source file 'Home.cpp')
   
   MyForm3.cpp
@@ -27,19 +51,43 @@ D:\assemply\CPU-scheduling\WHASOS\WHASOS\SJFscheduler.h(40,18): warning C4018: '
 D:\assemply\CPU-scheduling\WHASOS\WHASOS\SJFscheduler.h(42,19): warning C4018: '<': signed/unsigned mismatch
   (compiling source file 'MyForm3.cpp')
   
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(40,22): warning C4018: '<': signed/unsigned mismatch
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\RRscheduler.h(44,24): warning C4018: '<': signed/unsigned mismatch
   (compiling source file 'MyForm3.cpp')
   
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(101,16): warning C4018: '<': signed/unsigned mismatch
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\RRscheduler.h(46,28): warning C4018: '<': signed/unsigned mismatch
   (compiling source file 'MyForm3.cpp')
   
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(103,20): warning C4018: '<': signed/unsigned mismatch
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\FPJFscheduler.h(40,18): warning C4018: '<': signed/unsigned mismatch
   (compiling source file 'MyForm3.cpp')
   
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(252,16): warning C4018: '<': signed/unsigned mismatch
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\FPJFscheduler.h(42,19): warning C4018: '<': signed/unsigned mismatch
   (compiling source file 'MyForm3.cpp')
   
-D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(254,20): warning C4018: '<': signed/unsigned mismatch
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(49,22): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(120,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(122,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(272,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(274,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(420,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(422,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(568,16): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'MyForm3.cpp')
+  
+D:\assemply\CPU-scheduling\WHASOS\WHASOS\MyForm3.h(570,20): warning C4018: '<': signed/unsigned mismatch
   (compiling source file 'MyForm3.cpp')
   
   Generating Code...

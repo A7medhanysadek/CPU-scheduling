@@ -29,15 +29,16 @@ namespace WHASOS {
 	public ref class MyForm1 : public System::Windows::Forms::Form
 	{
 	public:
+		System::Windows::Forms::Timer^ timer2;
+		   System::Windows::Forms::Timer^ timer3;
+		   System::Windows::Forms::Timer^ timer4;
 		static vector<process> *vv;
-	private: System::Windows::Forms::Timer^ timer2;
-	public:
-	private: System::Windows::Forms::Timer^ timer3;
-	public:
-	private: System::Windows::Forms::Timer^ timer4;
 		fcfs* f;
 		sjf* s;
 		rr* r;
+	private: System::Windows::Forms::Label^ label43;
+	private: System::Windows::Forms::Label^ label44;
+	public:
 		fpjf* fp;
 
 		MyForm1(String^ st,vector<process> v)
@@ -99,6 +100,16 @@ namespace WHASOS {
 				s = new sjf(*vv);
 				this->timer2->Start();
 			}
+			else if (st == "RR")
+			{
+				r = new rr(*vv, 5);
+				this->timer3->Start();
+			}
+			else if (st == "FPJF")
+			{
+				fp = new fpjf(*vv);
+				this->timer4->Start();
+			}
 			//
 			//TODO: Add the constructor code here
 			//
@@ -106,6 +117,7 @@ namespace WHASOS {
 		static int pointer = 0;
 		void runfcfs()
 		{
+			this->label44->Text = f->currentTime.ToString();
 			if (pointer < f->processes.size() || !f->readyQueue.empty())
 			{
 				while (pointer < f->processes.size() && f->processes[pointer].arrivalTime <= f->currentTime)
@@ -257,6 +269,7 @@ namespace WHASOS {
 		}
 		void runsjf()
 		{
+			this->label44->Text = s->currentTime.ToString();
 			if (pointer < s->processes.size() || !s->readyQueue.empty())
 			{
 				while (pointer < s->processes.size() && s->processes[pointer].arrivalTime <= s->currentTime)
@@ -400,6 +413,311 @@ namespace WHASOS {
 				this->textBox4->Text = avgWaitTime.ToString();
 				this->textBox5->Text = avgTurnaroundTime.ToString();
 				this->timer2->Stop();
+			}
+		}
+		void runfpjf()
+		{
+			this->label44->Text = fp->currentTime.ToString();
+			if (pointer < fp->processes.size() || !fp->readyQueue.empty())
+			{
+				while (pointer < fp->processes.size() && fp->processes[pointer].arrivalTime <= fp->currentTime)
+				{
+					fp->readyQueue.push(fp->processes[pointer]);
+					pointer++;
+				}
+				if (!fp->readyQueue.empty())
+				{
+					process currentProcess = fp->readyQueue.top();
+					fp->currentProcessID = currentProcess.processID;
+					fp->readyQueueString = fp->printreadyqueue();
+					fp->finishedQueueString = fp->printfinishedqueue();
+					this->textBox3->Text = gcnew String(fp->currentProcessID.c_str());
+					this->textBox1->Text = gcnew String(fp->readyQueueString.c_str());
+					fp->readyQueue.pop();
+					if (currentProcess.startTime == -1)
+					{
+						currentProcess.startTime = fp->currentTime;
+						fp->totalResponseTime += currentProcess.startTime - currentProcess.arrivalTime;
+					}
+					currentProcess.lastRemainingBurst--;
+					currentProcess.pBarValue = 100 - (currentProcess.lastRemainingBurst * 100 / currentProcess.burstTime);
+					if (currentProcess.processID == "P1")
+					{
+						this->label18->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar1->Value = currentProcess.pBarValue;
+
+					}
+					else if (currentProcess.processID == "P2")
+					{
+						this->label19->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar2->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P3")
+					{
+						this->label20->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar3->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P4")
+					{
+						this->label21->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar4->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P5")
+					{
+						this->label22->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar5->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P6")
+					{
+						this->label23->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar6->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P7")
+					{
+						this->label24->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar7->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P8")
+					{
+						this->label25->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar8->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P9")
+					{
+						this->label26->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar9->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P10")
+					{
+						this->label27->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar10->Value = currentProcess.pBarValue;
+					}
+					if (currentProcess.lastRemainingBurst == 0)
+					{
+						currentProcess.endTime = fp->currentTime + 1;
+						currentProcess.waitTime = currentProcess.endTime - currentProcess.arrivalTime - currentProcess.burstTime;
+						currentProcess.turnaroundTime = currentProcess.endTime - currentProcess.arrivalTime;
+						currentProcess.pBarValue = 100;
+						fp->totalWaitTime += currentProcess.waitTime;
+						fp->totalTurnaroundTime += currentProcess.turnaroundTime;
+						fp->finishedQueue.push(currentProcess);
+						if (currentProcess.processID == "P1")
+						{
+							this->label28->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P2")
+						{
+							this->label29->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P3")
+						{
+							this->label30->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P4")
+						{
+							this->label31->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P5")
+						{
+							this->label32->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P6")
+						{
+							this->label33->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P7")
+						{
+							this->label34->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P8")
+						{
+							this->label35->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P9")
+						{
+							this->label36->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P10")
+						{
+							this->label37->Text = currentProcess.waitTime.ToString();
+						}
+					}
+					else
+					{
+						fp->readyQueue.push(currentProcess);
+					}
+				}
+				fp->currentTime++;
+			}
+			else
+			{
+				fp->readyQueueString = fp->printreadyqueue();
+				fp->finishedQueueString = fp->printfinishedqueue();
+				this->textBox1->Text = gcnew String(fp->readyQueueString.c_str());
+				//current time
+				this->textBox6->Text = fp->currentTime.ToString();
+				double avgWaitTime = fp->totalWaitTime / fp->totalProcesses;
+				double avgTurnaroundTime = fp->totalTurnaroundTime / fp->totalProcesses;
+				this->textBox4->Text = avgWaitTime.ToString();
+				this->textBox5->Text = avgTurnaroundTime.ToString();
+				this->timer3->Stop();
+			}
+		}
+		void runrr()
+		{
+			this->label44->Text = r->currentTime.ToString();
+			if (pointer < r->processes.size() || !r->readyQueue.empty())
+			{
+				while (pointer < r->processes.size() && r->processes[pointer].arrivalTime <= r->currentTime)
+				{
+					r->readyQueue.push(r->processes[pointer]);
+					pointer++;
+				}
+				if (!r->readyQueue.empty())
+				{
+					process currentProcess = r->readyQueue.front();
+					r->currentProcessID = currentProcess.processID;
+					r->readyQueueString = r->printreadyqueue();
+					r->finishedQueueString = r->printfinishedqueue();
+					this->textBox3->Text = gcnew String(r->currentProcessID.c_str());
+					this->textBox1->Text = gcnew String(r->readyQueueString.c_str());
+					if (currentProcess.startTime == -1)
+					{
+						currentProcess.startTime = r->currentTime;
+						r->totalResponseTime += currentProcess.startTime - currentProcess.arrivalTime;
+					}
+					currentProcess.lastRemainingBurst--;
+					currentProcess.pBarValue = 100 - (currentProcess.lastRemainingBurst * 100 / currentProcess.burstTime);
+					r->currentQuantum++;
+					if (currentProcess.processID == "P1")
+					{
+						this->label18->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar1->Value = currentProcess.pBarValue;
+
+					}
+					else if (currentProcess.processID == "P2")
+					{
+						this->label19->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar2->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P3")
+					{
+						this->label20->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar3->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P4")
+					{
+						this->label21->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar4->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P5")
+					{
+						this->label22->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar5->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P6")
+					{
+						this->label23->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar6->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P7")
+					{
+						this->label24->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar7->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P8")
+					{
+						this->label25->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar8->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P9")
+					{
+						this->label26->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar9->Value = currentProcess.pBarValue;
+					}
+					else if (currentProcess.processID == "P10")
+					{
+						this->label27->Text = currentProcess.lastRemainingBurst.ToString();
+						this->progressBar10->Value = currentProcess.pBarValue;
+					}
+					if (currentProcess.lastRemainingBurst == 0 || r->currentQuantum == r->timequantum)
+					{
+						if (currentProcess.lastRemainingBurst > 0)
+						{
+							r->readyQueue.push(currentProcess);
+						}
+						else
+						{
+							currentProcess.endTime = r->currentTime + 1;
+							currentProcess.waitTime = currentProcess.endTime - currentProcess.arrivalTime - currentProcess.burstTime;
+							currentProcess.turnaroundTime = currentProcess.endTime - currentProcess.arrivalTime;
+							currentProcess.pBarValue = 100;
+							r->totalWaitTime += currentProcess.waitTime;
+							r->totalTurnaroundTime += currentProcess.turnaroundTime;
+							r->finishedQueue.push(currentProcess);
+							if (currentProcess.processID == "P1")
+							{
+								this->label28->Text = currentProcess.waitTime.ToString();
+							}
+							else if (currentProcess.processID == "P2")
+							{
+								this->label29->Text = currentProcess.waitTime.ToString();
+							}
+							else if (currentProcess.processID == "P3")
+							{
+								this->label30->Text = currentProcess.waitTime.ToString();
+							}
+							else if (currentProcess.processID == "P4")
+							{
+								this->label31->Text = currentProcess.waitTime.ToString();
+							}
+							else if (currentProcess.processID == "P5")
+							{
+								this->label32->Text = currentProcess.waitTime.ToString();
+							}
+							else if (currentProcess.processID == "P6")
+							{
+								this->label33->Text = currentProcess.waitTime.ToString();
+							}
+							else if (currentProcess.processID == "P7")
+							{
+								this->label34->Text = currentProcess.waitTime.ToString();
+							}
+							else if (currentProcess.processID == "P8")
+							{
+								this->label35->Text = currentProcess.waitTime.ToString();
+							}
+							else if (currentProcess.processID == "P9")
+							{
+								this->label36->Text = currentProcess.waitTime.ToString();
+							}
+							else if (currentProcess.processID == "P10")
+							{
+								this->label37->Text = currentProcess.waitTime.ToString();
+							}
+						}
+						r->readyQueue.pop();
+						r->currentQuantum = 0;
+					}
+					else
+					{
+						r->readyQueue.front() = currentProcess;
+					}
+				}
+				r->currentTime++;
+			}
+			else
+			{
+				r->readyQueueString = r->printreadyqueue();
+				r->finishedQueueString = r->printfinishedqueue();
+				this->textBox1->Text = gcnew String(r->readyQueueString.c_str());
+				//current time
+				this->textBox6->Text = r->currentTime.ToString();
+				double avgWaitTime = r->totalWaitTime / r->totalProcesses;
+				double avgTurnaroundTime = r->totalTurnaroundTime / r->totalProcesses;
+				this->textBox4->Text = avgWaitTime.ToString();
+				this->textBox5->Text = avgTurnaroundTime.ToString();
+				this->timer3->Stop();
 			}
 		}
 
@@ -559,6 +877,8 @@ public: System::Windows::Forms::ProgressBar^ progressBar11;
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->timer3 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->timer4 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->label43 = (gcnew System::Windows::Forms::Label());
+			this->label44 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -1097,16 +1417,41 @@ public: System::Windows::Forms::ProgressBar^ progressBar11;
 			// timer3
 			// 
 			this->timer3->Interval = 1000;
+			this->timer3->Tick += gcnew System::EventHandler(this, &MyForm1::timer3_Tick);
 			// 
 			// timer4
 			// 
 			this->timer4->Interval = 1000;
+			this->timer4->Tick += gcnew System::EventHandler(this, &MyForm1::timer4_Tick);
+			// 
+			// label43
+			// 
+			this->label43->AutoSize = true;
+			this->label43->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label43->Location = System::Drawing::Point(1314, 850);
+			this->label43->Name = L"label43";
+			this->label43->Size = System::Drawing::Size(235, 39);
+			this->label43->TabIndex = 59;
+			this->label43->Text = L"Current time: ";
+			// 
+			// label44
+			// 
+			this->label44->AutoSize = true;
+			this->label44->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label44->Location = System::Drawing::Point(1553, 850);
+			this->label44->Name = L"label44";
+			this->label44->Size = System::Drawing::Size(0, 39);
+			this->label44->TabIndex = 60;
 			// 
 			// MyForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1811, 953);
+			this->Controls->Add(this->label44);
+			this->Controls->Add(this->label43);
 			this->Controls->Add(this->progressBar11);
 			this->Controls->Add(this->label42);
 			this->Controls->Add(this->label41);
@@ -1190,5 +1535,11 @@ private: System::Void timer2_Tick(System::Object^ sender, System::EventArgs^ e) 
 	runsjf();
 }
 
+private: System::Void timer3_Tick(System::Object^ sender, System::EventArgs^ e) {
+	runrr();
+}
+private: System::Void timer4_Tick(System::Object^ sender, System::EventArgs^ e) {
+	runfpjf();
+}
 };
 }
