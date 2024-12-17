@@ -24,8 +24,10 @@ Class WHASOS.MyForm1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.Windows.Forms.Label label41 : Public
     System.Windows.Forms.Label label42 : Public
     System.Windows.Forms.ProgressBar progressBar11 : Public
+    std.vector<process\,std::allocator<process> >* vv : Public, Static
+    Int32 pointer : Public, Static
   Methods:
-    run(vector<process\,std::allocator<process> >*): PrivateScope, Public, HideBySig
+    run(): PrivateScope, Public, HideBySig
 Class WHASOS.Home: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
