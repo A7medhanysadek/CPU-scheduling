@@ -49,7 +49,9 @@ namespace WHASOS {
 					f->currentProcessID = currentProcess.processID;
 					f->readyQueueString = f->printreadyqueue();
 					f->finishedQueueString = f->printfinishedqueue();
-					if (currentProcess.startTime == 0)
+					this->textBox3->Text = gcnew String(f->currentProcessID.c_str());
+					this->textBox1->Text = gcnew String(f->readyQueueString.c_str());
+					if (currentProcess.startTime == -1)
 					{
 						currentProcess.startTime = f->currentTime;
 						f->totalResponseTime += currentProcess.startTime - currentProcess.arrivalTime;
@@ -117,13 +119,53 @@ namespace WHASOS {
 						f->totalTurnaroundTime += currentProcess.turnaroundTime;
 						f->finishedQueue.push(currentProcess);
 						f->readyQueue.pop();
+						if (currentProcess.processID == "P1")
+						{
+							this->label28->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P2")
+						{
+							this->label29->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P3")
+						{
+							this->label30->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P4")
+						{
+							this->label31->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P5")
+						{
+							this->label32->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P6")
+						{
+							this->label33->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P7")
+						{
+							this->label34->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P8")
+						{
+							this->label35->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P9")
+						{
+							this->label36->Text = currentProcess.waitTime.ToString();
+						}
+						else if (currentProcess.processID == "P10")
+						{
+							this->label37->Text = currentProcess.waitTime.ToString();
+						}
 					}
 					else
 					{
 						f->readyQueue.front() = currentProcess;
 					}
-					f->currentTime++;
 				}
+				f->currentTime++;
 
 			}
 			else
