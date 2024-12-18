@@ -32,6 +32,10 @@
 - **C++**: Core programming language. 
 - **Windows Forms**: Used for creating the graphical user interface. 
 - **Header Files**: For modular code structure. 
+ patch-2
+- **Assembly**: Handles processes at a low level. ⚙️
+=======
+ main
 - **Data Structures**:
   - Queue 
   - Max Heap
@@ -56,5 +60,8 @@
 2.  Open the project in your C++ development environment (e.g., Visual Studio).
 3.  Build and run the project.
 4.  Use the GUI to input process details and choose a scheduling algorithm.
+ patch-2
+=======
 
 
+ main
