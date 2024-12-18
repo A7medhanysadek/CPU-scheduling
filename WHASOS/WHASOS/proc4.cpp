@@ -1,6 +1,5 @@
-
-extern "C" int gcd(long long a, long long b) {
-    int result;
+extern "C" int lcm(int a, int b) {
+    int resultg;
     __asm {
         mov eax, DWORD PTR a
         mov ebx, DWORD PTR b
@@ -14,6 +13,18 @@ extern "C" int gcd(long long a, long long b) {
             jmp gcd_loop
 
             end_gcd :
+        mov resultg, eax
+    }
+
+
+    long long gcd_result = resultg;
+    int result;
+    __asm {
+        mov eax, DWORD PTR a
+        mov ebx, DWORD PTR b
+        mov ecx, DWORD PTR gcd_result
+        imul eax, ebx
+        div ecx
         mov result, eax
     }
     return result;
