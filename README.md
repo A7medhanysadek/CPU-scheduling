@@ -1,34 +1,60 @@
-# CPU-scheduling
-A project that simulates CPU scheduling operations and implements common CPU scheduling algorithms. The project includes operations such as adding two numbers, converting a number to a specific base, and finding the LCM of two numbers.
-It also simulates popular CPU scheduling algorithms such as FCFS, RR, PQ, and SJF. The project is implemented in C++ with a visual simulation using WinForms. Custom data structures like queues and priority queues were created from scratch for use within the project.
+# CPU Scheduling Simulator
 
-## 📚 Introduction
-This project aims to simulate how the CPU manages tasks using various algorithms. It provides a visual representation of CPU scheduling and the execution of basic operations. The project leverages several CPU scheduling algorithms to manage processes efficiently. Custom data structures, such as queues and priority queues, were designed to be used flexibly throughout the project.
+## Description
+🎯 This project is a **CPU Scheduling Simulator** developed as part of a college assignment. The simulator is designed to demonstrate the functionality of four fundamental CPU scheduling algorithms. It enables users to input various process parameters and visualize the scheduling results, including key performance metrics.
 
-## ✨ Features
-- Basic Processes in Assembly:
-  - Addition of two numbers ➕: Perform simple addition of two numbers using Assembly code.
-  - Number base conversion 🔢: Convert a number from decimal to a specific base (e.g., binary, hexadecimal).
-  - Finding the Least Common Multiple (LCM) of two numbers 📏: Calculate the LCM of two numbers using Assembly operations.
-- CPU Scheduling Algorithms:
-  - FCFS (First-Come, First-Served) ⏳: A non-preemptive scheduling algorithm where the process that arrives first is executed first.
-  - RR (Round Robin) 🔄: A preemptive scheduling algorithm that assigns each process a fixed time slot in a circular order.
-  - PQ (Priority Queue) 🏅: A scheduling algorithm that assigns priority to processes and executes the process with the highest priority first.
-  - SJF (Shortest Job First) ⬇️: A non-preemptive scheduling algorithm that executes the process with the shortest burst time first.
-  
-- Visual Simulation 🖥️: The project uses WinForms for a graphical interface that visually simulates the CPU scheduling algorithms, providing real-time feedback and interaction.
- 
-- Custom Data Structures 🛠️: Implemented custom data structures such as Queue and Priority Queue to efficiently manage processes and simulate the scheduling algorithms. These data structures were built from scratch to suit the project’s requirements.
+## Features
+⚙️ The simulator implements the following CPU scheduling algorithms:
+- **First Come First Serve (FCFS)** 
+- **Round Robin (RR)** 
+- **First Priority First Serve (FPFS)** 
+- **Shortest Job First (SJF)** 
 
-## ⚙ Technologies Used
-- C++ for core logic implementation
-- WinForms for graphical user interface (GUI)
-- Assembly to handle Processes
+### Key Functionalities:
+-  Calculates **waiting time**, **turnaround time**, **average waiting time**, and **running time** for processes.
+-  Provides a real-time view of the **ready queue**, showing all processes waiting for execution.
+-  Displays the **current running process**, indicating the process currently being executed by the CPU.
+-  Allows users to input:
+  - Burst time
+  - Priority
+  - Type of process (e.g., GCD, LCM, Fast Power, Adding Two Numbers).
+-  Visualizes process scheduling with clear output metrics.
 
+## Process Types
+🔢 The simulator operates on four main types of processes:
+1. **GCD (Greatest Common Divisor)** 
+2. **LCM (Least Common Multiple)** 
+3. **Fast Power** 
+4. **Adding Two Numbers** 
 
+## Technical Details
+### Languages and Tools:
+- **C++**: Core programming language. 
+- **Windows Forms**: Used for creating the graphical user interface. 
+- **Header Files**: For modular code structure. 
+- **Data Structures**:
+  - Queue 
+  - Max Heap
+  - Linked List
 
+## How It Works
+1.  The user inputs process details such as burst time, priority, and process type.
+2.  The simulator executes the selected scheduling algorithm.
+3.  Results are displayed, showing:
+   - **Waiting Time**: Time a process spends waiting in the queue.
+   - **Turnaround Time**: Total time taken for process completion.
+   - **Average Waiting Time**: Mean waiting time of all processes.
+   - **Running Time**: Time the CPU spends executing the processes.
+   - **Ready Queue**: A real-time list of processes waiting to be executed. 
+   - **Current Running Process**: The process actively being executed by the CPU. 
 
-
-
+## Usage
+1.  Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/cpu-scheduling-simulator.git](https://github.com/A7medhanysadek/CPU-scheduling
+   ```
+2.  Open the project in your C++ development environment (e.g., Visual Studio).
+3.  Build and run the project.
+4.  Use the GUI to input process details and choose a scheduling algorithm.
 
 
